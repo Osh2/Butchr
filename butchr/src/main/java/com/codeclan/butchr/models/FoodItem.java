@@ -12,14 +12,14 @@ public abstract class FoodItem implements ForSale {
     private int totalStock;
     private int availableForReservation;
 
-    public FoodItem(String name, String type, String provenance, String cookingInstructions, double price, int totalStock, int availableForReservation) {
+    public FoodItem(String name, String type, String provenance, String cookingInstructions, double price, int totalStock) {
         this.name = name;
         this.type = type;
         this.provenance = provenance;
         this.cookingInstructions = cookingInstructions;
         this.price = price;
         this.totalStock = totalStock;
-        this.availableForReservation = availableForReservation;
+        this.availableForReservation = calculateAvailableReservation();
         this.isHeld = false;
     }
 
@@ -89,5 +89,10 @@ public abstract class FoodItem implements ForSale {
 
     public void sell(int number){
         this.totalStock -= number;
+        this.availableForReservation = calculateAvailableReservation();
+    }
+
+    public int calculateAvailableReservation(){
+        return Math.round(totalStock/2);
     }
 }

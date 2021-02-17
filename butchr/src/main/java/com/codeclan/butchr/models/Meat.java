@@ -3,8 +3,8 @@ package com.codeclan.butchr.models;
 public class Meat extends FoodItem {
     private String cut;
 
-    public Meat(String name, String type, String provenance, String cookingInstructions, double price, int totalStock, int availableForReservation, String cut) {
-        super(name, type, provenance, cookingInstructions, price, totalStock, availableForReservation);
+    public Meat(String name, String type, String provenance, String cookingInstructions, double price, int totalStock, String cut) {
+        super(name, type, provenance, cookingInstructions, price, totalStock);
         this.cut = cut;
     }
 

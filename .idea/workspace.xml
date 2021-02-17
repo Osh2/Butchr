@@ -1,5 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fc099f6e-8631-4d89-bf82-588243d38f4d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/butchr/src/test/java/com/codeclan/butchr/modelsTest/sellTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/butchr/src/main/java/com/codeclan/butchr/models/FoodItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/butchr/src/main/java/com/codeclan/butchr/models/FoodItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/butchr/src/main/java/com/codeclan/butchr/models/Meat.java" beforeDir="false" afterPath="$PROJECT_DIR$/butchr/src/main/java/com/codeclan/butchr/models/Meat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/butchr/src/main/java/com/codeclan/butchr/models/Processed.java" beforeDir="false" afterPath="$PROJECT_DIR$/butchr/src/main/java/com/codeclan/butchr/models/Processed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/butchr/src/test/java/com/codeclan/butchr/ButchrApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/butchr/src/test/java/com/codeclan/butchr/ButchrApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -7,7 +53,122 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProjectId" id="1obcDI47XXd2zKHEdH61rOWk5al" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager" selected="JUnit.sellTest.nonFoodCanSell">
+    <configuration name="sellTest.canSell" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="butchr" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codeclan.butchr.modelsTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codeclan.butchr.modelsTest" />
+      <option name="MAIN_CLASS_NAME" value="com.codeclan.butchr.modelsTest.sellTest" />
+      <option name="METHOD_NAME" value="canSell" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sellTest.nonFoodCanSell" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="butchr" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codeclan.butchr.modelsTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codeclan.butchr.modelsTest" />
+      <option name="MAIN_CLASS_NAME" value="com.codeclan.butchr.modelsTest.sellTest" />
+      <option name="METHOD_NAME" value="nonFoodCanSell" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sellTest.processedCanSell" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="butchr" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codeclan.butchr.modelsTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codeclan.butchr.modelsTest" />
+      <option name="MAIN_CLASS_NAME" value="com.codeclan.butchr.modelsTest.sellTest" />
+      <option name="METHOD_NAME" value="processedCanSell" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.sellTest.nonFoodCanSell" />
+        <item itemvalue="JUnit.sellTest.processedCanSell" />
+        <item itemvalue="JUnit.sellTest.canSell" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fc099f6e-8631-4d89-bf82-588243d38f4d" name="Default Changelist" comment="" />
+      <created>1613558610715</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613558610715</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="453" y="129" key="#com.intellij.ide.util.MemberChooser" timestamp="1613560241027">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="453" y="129" key="#com.intellij.ide.util.MemberChooser/0.23.1280.777@0.23.1280.777" timestamp="1613560241027" />
+    <state width="1238" height="194" key="GridCell.Tab.0.bottom" timestamp="1613563971705">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="194" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1613563971705" />
+    <state width="1238" height="194" key="GridCell.Tab.0.center" timestamp="1613563971704">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="194" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1613563971704" />
+    <state width="1238" height="194" key="GridCell.Tab.0.left" timestamp="1613563971703">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="194" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1613563971703" />
+    <state width="1238" height="194" key="GridCell.Tab.0.right" timestamp="1613563971705">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="194" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1613563971705" />
+    <state x="438" y="327" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613560811672">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="438" y="327" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.777@0.23.1280.777" timestamp="1613560811672" />
+    <state x="338" y="161" width="604" height="490" key="find.popup" timestamp="1613558698177">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="338" y="161" width="604" height="490" key="find.popup/0.23.1280.777@0.23.1280.777" timestamp="1613558698177" />
   </component>
 </project>
