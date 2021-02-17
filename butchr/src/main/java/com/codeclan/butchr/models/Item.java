@@ -1,15 +1,15 @@
 package com.codeclan.butchr.models;
 
-import com.codeclan.butchr.models.behaviours.ForSale;
 
-public class NonFoodItem implements ForSale {
+public class Item {
+
     private String name;
     private String type;
     private String description;
     private double price;
     private int totalStock;
 
-    public NonFoodItem(String name, String type, String description, double price, int totalStock) {
+    public Item(String name, String type, String description, double price, int totalStock) {
         this.name = name;
         this.type = type;
         this.description = description;
@@ -60,4 +60,6 @@ public class NonFoodItem implements ForSale {
     public void sell(int number){
         this.totalStock -= number;
     }
+
+    //add conditions to handle low stock/ no stock
 }

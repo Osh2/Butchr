@@ -4,8 +4,8 @@ public class Processed extends FoodItem{
     private String ingredients;
     private String allergens;
 
-    public Processed(String name, String type, String provenance, String cookingInstructions, double price, int totalStock, String ingredients, String allergens) {
-        super(name, type, provenance, cookingInstructions, price, totalStock);
+    public Processed(String name, String type, String description, double price, int totalStock, String cookingInstructions, int availableForReservation, String ingredients, String allergens) {
+        super(name, type, description, price, totalStock, cookingInstructions, availableForReservation);
         this.ingredients = ingredients;
         this.allergens = allergens;
     }
