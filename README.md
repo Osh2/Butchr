@@ -8,35 +8,31 @@ An app which will improve the shopping experience of customers at Lidgates(other
 - Extensions diff libraries (notification library? QRCode.react, nivo, websocket, weather library, news feeds )
 
 ## MVP
-- Create ForSale interface()
-- Create an Item class (name, price, type, details, cooking_instructions)
-- Create a Meat subclass ( cut )
-- Create a Processed subclass (ingredients, allergens)
-- Create a Customer class
+- Allow the user to see a list of all stock,  maybe divided into categories 
+- Allow a user to view an individual items details
 
-- Create DB with models
-- Create CRUD routes
-
-- Fetch data from the back end, rendering different pages through React Router 
-- Display all stock
-- Allow user to select an item and display all relevant information
-- Allow a user to reserve an item
 
 ## EXTENSIONS
+- Create a Customer class ( allow a user to "sign in" if they exists or create their "account" if not )
+- Allow a user to reserve an item (inform the user how many are left in stock, which can't be reserved )
 - Style the bitch 
+
 - Search function (by name, by type)
 - Filter/sort by price 
 - Display recipes for items
-- Queue stuff
-- Accessiblity 
-- Allow a user to book a collection slot
 
+- Allow a user to book a collection slot (calendar)
+- Accessiblity (speech to text, screen s)
+
+- Implement a calendar to display upcoming events 
 ## Advanced Extensions
+- Implement QR code generator to allow the users details(basket) to be grouped together and accessed in store by the butcher
 - Allow the user to buy an item
-- Implement QR scanner
+
 - Implement weather information 
 - Implement news information
+
 - Live chat
-- Notifications
-- Implement a calendar to display upcoming events 
+- Interaction based notifications, ie. based on user choices or events/weather/news
+
 

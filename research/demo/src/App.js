@@ -9,7 +9,7 @@ export default function App() {
       className="block"
       onClick={() => setIsActive(!isActive)}
       animate={{
-        rotate: isActive ? 300 : 360
+        rotate: isActive ? 200 : 360
       }}
     >
       Hello Framer motion
