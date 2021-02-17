@@ -1,11 +1,11 @@
 # FINAL PROJ BRIEF - Butchr
 An app which will improve the shopping experience of customers at Lidgates(other butchers available) by displaying information about products, news and events. 
 
-### Tech - we know we want 
-- Java backend w some sort of db, H2? 
+### Tech 
+- Java backend w H2 DB 
 - React frontend + HTML/CSS
 
-- Extensions diff libraries (notification library? QRCode.react, nivo, websocket, weather library, news feeds )
+- Extensions diff libraries (notification library?, QRCode.react, nivo, websocket, weather library, news feeds )
 
 ## MVP
 - Allow the user to see a list of all stock,  maybe divided into categories 
