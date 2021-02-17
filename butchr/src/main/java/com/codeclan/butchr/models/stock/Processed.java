@@ -1,11 +1,13 @@
-package com.codeclan.butchr.models;
+package com.codeclan.butchr.models.stock;
 
-public class Processed extends FoodItem{
+import com.codeclan.butchr.models.stock.FoodItem;
+
+public class Processed extends FoodItem {
     private String ingredients;
     private String allergens;
 
-    public Processed(String name, String type, String description, double price, int totalStock, String cookingInstructions, String ingredients, String allergens) {
-        super(name, type, description, price, totalStock, cookingInstructions);
+    public Processed(String name, String type, String description, double price, String cookingInstructions, String ingredients, String allergens) {
+        super(name, type, description, price, cookingInstructions);
         this.ingredients = ingredients;
         this.allergens = allergens;
     }

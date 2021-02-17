@@ -2,6 +2,8 @@ package com.codeclan.butchr.models;
 
 
 
+import com.codeclan.butchr.models.stock.Item;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -71,12 +73,12 @@ public class User {
         this.basket = basket;
     }
 
-    public void addToBasket(Item item, int quantity){
-        item.setQuantityOrdered(quantity);
-        basket.add(item);
-        item.removeQuantityFromStock(quantity);
+//    public void addToBasket(Item item, int quantity){
+//        item.setQuantityOrdered(quantity);
+//        basket.add(item);
+//        item.removeQuantityFromStock(quantity);
+//    }
 
-    }
 
 
     //buy() method
