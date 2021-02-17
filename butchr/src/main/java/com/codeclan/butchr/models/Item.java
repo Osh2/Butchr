@@ -8,6 +8,8 @@ public class Item {
     private String description;
     private double price;
     private int totalStock;
+    private int quantityOrdered;
+    private boolean inBasket;
 
     public Item(String name, String type, String description, double price, int totalStock) {
         this.name = name;
@@ -15,6 +17,24 @@ public class Item {
         this.description = description;
         this.price = price;
         this.totalStock = totalStock;
+        this.quantityOrdered = 0;
+        this.inBasket = false;
+    }
+
+    public int getQuantityOrdered() {
+        return quantityOrdered;
+    }
+
+    public void setQuantityOrdered(int quantityOrdered) {
+        this.quantityOrdered = quantityOrdered;
+    }
+
+    public boolean isInBasket() {
+        return inBasket;
+    }
+
+    public void setInBasket(boolean inBasket) {
+        this.inBasket = inBasket;
     }
 
     public String getName() {
@@ -57,9 +77,10 @@ public class Item {
         this.totalStock = totalStock;
     }
 
-    public void sell(int number){
-        this.totalStock -= number;
+    public void removeQuantityFromStock(int quantity) {
+        totalStock -= quantity;
     }
+
 
     //add conditions to handle low stock/ no stock
 }
