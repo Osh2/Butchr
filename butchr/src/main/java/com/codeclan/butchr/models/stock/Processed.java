@@ -21,6 +21,9 @@ public class Processed extends Item {
         this.allergens = new ArrayList<>();
     }
 
+    public Processed() {
+    }
+
     public String getIngredients() {
         return ingredients;
     }
