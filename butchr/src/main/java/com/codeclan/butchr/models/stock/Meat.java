@@ -1,12 +1,12 @@
 package com.codeclan.butchr.models.stock;
 
-import com.codeclan.butchr.models.stock.FoodItem;
 
-public class Meat extends FoodItem {
+public class Meat extends Item{
+
     private String cut;
 
-    public Meat(String name, String type, String description, double price, String cookingInstructions, String cut) {
-        super(name, type, description, price, cookingInstructions);
+    public Meat(String name, String type, String description, double price, String cut) {
+        super(name, type, description, price);
         this.cut = cut;
     }
 
