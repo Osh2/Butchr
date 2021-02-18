@@ -5,30 +5,28 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
-@Table(name = "users")
+
 public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private long id;
 
-    @Column
+
     private String name;
 
-    @Column
+
     private String email;
 
-    @Column(name = "tele_num")
+
     private String teleNum;
 
-    @Column
+
     private String address;
 
-    @Column
+
     private int age;
 
-    //@JoinColumn?
+
     private List<Item> basket;
 
     public User(String name, String email, String teleNum, String address, int age) {

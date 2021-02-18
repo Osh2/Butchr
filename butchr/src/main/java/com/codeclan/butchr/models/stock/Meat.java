@@ -1,8 +1,12 @@
 package com.codeclan.butchr.models.stock;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
 
+@Entity(name = "meat")
 public class Meat extends Item{
 
+    @Column
     private String cut;
 
     public Meat(String name, String type, String description, double price, String cut) {
@@ -10,6 +14,8 @@ public class Meat extends Item{
         this.cut = cut;
     }
 
+    public Meat() {
+    }
 
     public String getCut() {
         return cut;

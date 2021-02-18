@@ -1,13 +1,26 @@
 package com.codeclan.butchr.models.stock;
 
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 
-@MappedSuperclass
+@Entity(name = "items")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "item_type")
 public abstract class Item {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+    @Column
     private String name;
+
+    @Column
     private String type;
+
+    @Column
     private String description;
+
+    @Column
     private double price;
 
 
@@ -18,7 +31,16 @@ public abstract class Item {
         this.price = price;
     }
 
+    public Item() {
+    }
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
