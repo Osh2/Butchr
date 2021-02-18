@@ -22,10 +22,10 @@ public class ItemController {
         return (new ResponseEntity<>(itemRepository.findAll(), HttpStatus.OK));
     }
 
-//    @GetMapping(value = "/items/{type}")
-//    public ResponseEntity<List<Item>> getAllProcessedItems(@PathVariable String type){
-//        return (new ResponseEntity<>(itemRepository.findByItemType(type), HttpStatus.OK));
-//    }
+    @GetMapping(value = "/items/{type}")
+    public ResponseEntity<List<Item>> getAllProcessedItems(@PathVariable String type){
+        return (new ResponseEntity<>(itemRepository.findByItemType(type), HttpStatus.OK));
+    }
 
 
 

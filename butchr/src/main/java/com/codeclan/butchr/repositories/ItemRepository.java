@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface ItemRepository extends JpaRepository<Item, Long> {
 
-//    List<Item> findByItemType(String type);
+    List<Item> findByItemType(String type);
 }

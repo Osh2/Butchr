@@ -7,12 +7,15 @@ import javax.persistence.*;
 
 @Entity(name = "items")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "item_type")
+@DiscriminatorColumn(name = "itemType")
 public abstract class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @Column(insertable = false, updatable = false)
+    private String itemType;
 
     @Column
     private String name;
@@ -41,6 +44,14 @@ public abstract class Item {
     }
 
     public Item() {
+    }
+
+    public String getItemType() {
+        return itemType;
+    }
+
+    public void setItemType(String itemType) {
+        this.itemType = itemType;
     }
 
     public long getId() {
