@@ -5,28 +5,30 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Entity
+@Table(name = "users")
 public class User {
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-
+    @Column
     private String name;
 
-
+    @Column
     private String email;
 
-
+    @Column(name = "tele_num")
     private String teleNum;
 
-
+    @Column
     private String address;
 
-
+    @Column
     private int age;
 
-
+    @OneToMany(mappedBy = "user")
     private List<Item> basket;
 
     public User(String name, String email, String teleNum, String address, int age) {
@@ -95,6 +97,10 @@ public class User {
 
     public void setBasket(List<Item> basket) {
         this.basket = basket;
+    }
+
+    public void addToBasket(Item item){
+        basket.add(item);
     }
 
 

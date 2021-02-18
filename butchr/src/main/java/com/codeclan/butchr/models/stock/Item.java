@@ -1,5 +1,7 @@
 package com.codeclan.butchr.models.stock;
 
+import com.codeclan.butchr.models.User;
+
 import javax.persistence.*;
 
 @Entity(name = "items")
@@ -23,12 +25,17 @@ public abstract class Item {
     @Column
     private double price;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
 
     public Item(String name, String type, String description, double price) {
         this.name = name;
         this.type = type;
         this.description = description;
         this.price = price;
+        this.user = null;
     }
 
     public Item() {
@@ -74,5 +81,11 @@ public abstract class Item {
         this.price = price;
     }
 
+    public User getUser() {
+        return user;
+    }
 
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
