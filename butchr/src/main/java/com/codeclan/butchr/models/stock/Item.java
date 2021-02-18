@@ -1,6 +1,7 @@
 package com.codeclan.butchr.models.stock;
 
 import com.codeclan.butchr.models.User;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 
@@ -27,6 +28,7 @@ public abstract class Item {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
+    @JsonIgnoreProperties("basket")
     private User user;
 
 

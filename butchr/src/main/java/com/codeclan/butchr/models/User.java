@@ -1,5 +1,6 @@
 package com.codeclan.butchr.models;
 import com.codeclan.butchr.models.stock.Item;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -29,6 +30,7 @@ public class User {
     private int age;
 
     @OneToMany(mappedBy = "user")
+    @JsonIgnoreProperties("user")
     private List<Item> basket;
 
     public User(String name, String email, String teleNum, String address, int age) {
