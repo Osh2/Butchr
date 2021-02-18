@@ -31,6 +31,9 @@ public class DataLoader implements ApplicationRunner {
         User user1 = new User("Bill", "Bill@Bill", "123094", "99bill lane", 7718);
         userRepository.save(user1);
 
+        User user2 = new User("Sami", "Sami@google", "111223", "SamiStreet", 4);
+        userRepository.save(user2);
+
         Meat meat1 = new Meat("Steak", "Beef", "Delicious beef in steak form", 15, "fillet");
         itemRepository.save(meat1);
 
