@@ -1,19 +1,34 @@
 package com.codeclan.butchr.models;
-
-
-
 import com.codeclan.butchr.models.stock.Item;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@Table(name = "users")
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+    @Column
     private String name;
+
+    @Column
     private String email;
+
+    @Column(name = "tele_num")
     private String teleNum;
+
+    @Column
     private String address;
+
+    @Column
     private int age;
+
+    //@JoinColumn?
     private List<Item> basket;
 
     public User(String name, String email, String teleNum, String address, int age) {
@@ -23,6 +38,17 @@ public class User {
         this.address = address;
         this.age = age;
         this.basket = new ArrayList<>();
+    }
+
+    public User() {
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -73,16 +99,5 @@ public class User {
         this.basket = basket;
     }
 
-//    public void addToBasket(Item item, int quantity){
-//        item.setQuantityOrdered(quantity);
-//        basket.add(item);
-//        item.removeQuantityFromStock(quantity);
-//    }
 
-
-
-    //buy() method
-    //remove form basket
-    //getBasketTotalCost
-    //sortBasketBy?()
 }
