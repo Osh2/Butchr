@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import HomePage from "../components/HomePage"
 import MeatPage from "../components/meats/MeatPage";
+import ProcessedPage from "../components/processeds/ProcessedPage";
 
 const ButchrContainer = function() {
 
@@ -37,6 +38,7 @@ const ButchrContainer = function() {
             <h1> Butchr Container </h1>
             <HomePage />
             <MeatPage meatData = {meatData}/>
+            <ProcessedPage processedData = {processedData}/>
             
         </>
     )

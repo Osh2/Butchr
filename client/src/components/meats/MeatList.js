@@ -5,7 +5,7 @@ const MeatList = ({meatData}) => {
   
     const meatJSX = meatData.map((item) => {
         return(
-            <MeatCard meatName = {item.name}  key={item.id}/>
+            <MeatCard meat = {item}  key={item.id}/>
         )
     })
     
