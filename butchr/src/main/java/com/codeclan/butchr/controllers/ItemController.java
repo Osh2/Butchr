@@ -5,11 +5,10 @@ import com.codeclan.butchr.repositories.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class ItemController {
@@ -26,6 +25,28 @@ public class ItemController {
     public ResponseEntity<List<Item>> getAllProcessedItems(@PathVariable String type){
         return (new ResponseEntity<>(itemRepository.findByItemType(type), HttpStatus.OK));
     }
+
+    @GetMapping(value = "/items/item/{id}")
+    public ResponseEntity<Optional<Item>> getItem(@PathVariable long id){
+        return (new ResponseEntity<>(itemRepository.findById(id), HttpStatus.OK));
+
+    }
+
+//    @PutMapping(value= "/items/item/{id}")
+//    public ResponseEntity<Optional<Item>> updateItem(@RequestBody Item itemUpdatedUser, @PathVariable long id){
+//        Optional foundItem = itemRepository.findById(id);
+//        foundItem.
+//        itemRepository.save(itemUpdatedUser);
+//        return (new ResponseEntity<>(itemRepository.findById(id), HttpStatus.OK));
+
+//    }
+
+//    @PostMapping(value= "/items")
+//    public ResponseEntity<Item> createItem(@RequestBody Item item){
+//        itemRepository.save(item);
+//        return new ResponseEntity<>(item, HttpStatus.CREATED);
+//
+//    }
 
 
 
