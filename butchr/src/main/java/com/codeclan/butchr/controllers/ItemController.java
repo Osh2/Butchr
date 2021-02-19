@@ -29,10 +29,6 @@ public class ItemController {
 
 
 
-    //get all proces
-    //get all meat
-    //get all nonfood
-
     //create
     //update
     //delete all
