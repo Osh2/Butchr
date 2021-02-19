@@ -1,6 +1,7 @@
 package com.codeclan.butchr.controllers;
 
 import com.codeclan.butchr.models.stock.Item;
+import com.codeclan.butchr.models.stock.Meat;
 import com.codeclan.butchr.repositories.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -27,32 +28,14 @@ public class ItemController {
     }
 
     @GetMapping(value = "/items/item/{id}")
-    public ResponseEntity<Optional<Item>> getItem(@PathVariable long id){
+    public ResponseEntity<Optional<Item>> getItemById(@PathVariable long id){
         return (new ResponseEntity<>(itemRepository.findById(id), HttpStatus.OK));
-
     }
 
-//    @PutMapping(value= "/items/item/{id}")
-//    public ResponseEntity<Optional<Item>> updateItem(@RequestBody Item itemUpdatedUser, @PathVariable long id){
-//        Optional foundItem = itemRepository.findById(id);
-//        foundItem.
-//        itemRepository.save(itemUpdatedUser);
-//        return (new ResponseEntity<>(itemRepository.findById(id), HttpStatus.OK));
-
-//    }
-
-//    @PostMapping(value= "/items")
-//    public ResponseEntity<Item> createItem(@RequestBody Item item){
-//        itemRepository.save(item);
-//        return new ResponseEntity<>(item, HttpStatus.CREATED);
-//
-//    }
+    @DeleteMapping(value = "/items/{id}")
+    public void deleteItemById(@PathVariable long id){
+        itemRepository.deleteById(id);
+    }
 
 
-
-    //create
-    //update
-    //delete all
-    //delete 1
-    //get one by?
 }
