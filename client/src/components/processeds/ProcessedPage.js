@@ -1,10 +1,10 @@
 import ProcessedList from "./ProcessedList";
 
-const ProcessedPage = function({processedData}){
+const ProcessedPage = function({processedData, setIndividualProcessed}){
 
     return (
         <>
-        <ProcessedList processedData = {processedData} />
+        <ProcessedList processedData = {processedData} setIndividualProcessed={setIndividualProcessed}/>
         </>
     )
 }

@@ -1,7 +1,7 @@
 const MeatCard = function({ meat, setIndividualMeat}) {
 
 
-    const getMeatDetails = (id) => {
+    const getMeatDetails = () => {
         fetch("http://localhost:8080/items/item/" + meat.id)
         .then(res => res.json())
         .then(returnedData => setIndividualMeat(returnedData))

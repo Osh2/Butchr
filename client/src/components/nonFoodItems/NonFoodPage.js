@@ -1,9 +1,9 @@
 import NonFoodList from "../nonFoodItems/NonFoodList";
 
-const NonFoodPage = ({nonFoodData}) => {
+const NonFoodPage = ({nonFoodData, setIndivdualNonFoodItem}) => {
      return (
          <>
-            <NonFoodList nonFoodData={nonFoodData} />
+            <NonFoodList nonFoodData={nonFoodData} setIndivdualNonFoodItem={setIndivdualNonFoodItem}/>
          </>
      )
 }
