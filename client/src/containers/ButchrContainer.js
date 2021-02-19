@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {Router, Swtich, Route} from "react-router"
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom"
 import HomePage from "../components/HomePage"
 import MeatPage from "../components/meats/MeatPage";
 import ProcessedPage from "../components/processeds/ProcessedPage";
@@ -7,6 +7,7 @@ import NonFoodPage from "../components/nonFoodItems/NonFoodPage";
 import MeatDetails from "../components/meats/MeatDetails";
 import NonFoodDetails from "../components/nonFoodItems/NonFoodDetails";
 import ProcessedDetails from "../components/processeds/ProcessedDetails";
+
 
 const ButchrContainer = function() {
 
@@ -44,17 +45,20 @@ const ButchrContainer = function() {
     }, [])
 
     return(
-        <Router>
+
+        <Router  >
             <h1> Butchr Container </h1>
             <HomePage />
-            <MeatPage meatData = {meatData} setIndividualMeat={setIndividualMeat} />
+            <Route path ="/meat" render={(props) => <MeatPage {...props} meatData={meatData} setIndividualMeat={setIndividualMeat} />} /> 
+            
+            
             <ProcessedPage processedData = {processedData} setIndividualProcessed={setIndividualProcessed} />
             <NonFoodPage nonFoodData={nonFoodData} setIndivdualNonFoodItem={setIndivdualNonFoodItem} />
             <MeatDetails individualMeat={individualMeat} />
             <NonFoodDetails individualNonFoodItem={individualNonFoodItem} />
-            <ProcessedDetails individualProcessed={individualProcessed} />
+            <ProcessedDetails individualProcessed={individualProcessed} /> 
             
-        </Router>
+         </Router>
     )
 }
 
