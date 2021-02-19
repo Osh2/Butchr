@@ -1,11 +1,11 @@
 import MeatList from "./MeatList"
 
-const MeatPage = function({meatData}) {
+const MeatPage = function({meatData, setIndividualMeat}) {
     
     
     return (
         <>
-            <MeatList  meatData={meatData}/>
+            <MeatList  meatData={meatData} setIndividualMeat={setIndividualMeat}/>
         </>
     )
 }

@@ -10,6 +10,11 @@ const ButchrContainer = function() {
     const [processedData, setProcessedData] = useState([]);
     const [nonFoodData, setNonFoodData] = useState([]);
 
+    const [individualMeat, setIndividualMeat] = useState({});
+    const [individualProcessed, setIndividualProcessed] = useState({});
+    const [individualNonFoodItem, setIndivdualNonFoodItem] = useState({});
+
+    console.log(individualMeat);
     const getMeatData = () => {
         fetch("http://localhost:8080/items/meat")
         .then(res => res.json())
@@ -38,7 +43,7 @@ const ButchrContainer = function() {
         <>
             <h1> Butchr Container </h1>
             <HomePage />
-            <MeatPage meatData = {meatData}/>
+            <MeatPage meatData = {meatData} setIndividualMeat={setIndividualMeat}/>
             <ProcessedPage processedData = {processedData}/>
             <NonFoodPage nonFoodData={nonFoodData}/>
             
