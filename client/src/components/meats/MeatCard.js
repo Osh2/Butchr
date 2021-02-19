@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom";
 const MeatCard = function({ meat, setIndividualMeat}) {
 
 
@@ -14,7 +15,7 @@ const MeatCard = function({ meat, setIndividualMeat}) {
             <h5>{meat.description}</h5>
             <h5>£{meat.price}</h5>
             <h5>{meat.cut}</h5>
-            <button onClick={getMeatDetails}>Details</button>
+            <Link to="/meatdetails"><button onClick={getMeatDetails}>Details</button></Link>
         </>
     )
 }

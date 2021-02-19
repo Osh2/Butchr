@@ -8,7 +8,6 @@ import MeatDetails from "../components/meats/MeatDetails";
 import NonFoodDetails from "../components/nonFoodItems/NonFoodDetails";
 import ProcessedDetails from "../components/processeds/ProcessedDetails";
 
-
 const ButchrContainer = function() {
 
     const [meatData, setMeatData] = useState([]);
@@ -49,15 +48,14 @@ const ButchrContainer = function() {
         <Router  >
             <h1> Butchr Container </h1>
             <HomePage />
+            <Switch >
             <Route path ="/meat" render={(props) => <MeatPage {...props} meatData={meatData} setIndividualMeat={setIndividualMeat} />} /> 
-            
-            
-            <ProcessedPage processedData = {processedData} setIndividualProcessed={setIndividualProcessed} />
-            <NonFoodPage nonFoodData={nonFoodData} setIndivdualNonFoodItem={setIndivdualNonFoodItem} />
-            <MeatDetails individualMeat={individualMeat} />
-            <NonFoodDetails individualNonFoodItem={individualNonFoodItem} />
-            <ProcessedDetails individualProcessed={individualProcessed} /> 
-            
+            <Route path ="/processed" render={(props) => <ProcessedPage {...props} processedData = {processedData} setIndividualProcessed={setIndividualProcessed} />} />
+            <Route path ="/nonFood" render={(props) => <NonFoodPage nonFoodData={nonFoodData} setIndivdualNonFoodItem={setIndivdualNonFoodItem} /> } />
+            <Route path="/meatdetails" render={(props) => <MeatDetails individualMeat={individualMeat} />} />
+            <Route path="/nonfooddetails" render={(props) => <NonFoodDetails individualNonFoodItem={individualNonFoodItem} />} />
+            <Route path ="processeddetails" render={(props) => <ProcessedDetails individualProcessed={individualProcessed} /> } />
+            </Switch>
          </Router>
     )
 }
