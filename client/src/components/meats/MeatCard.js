@@ -1,4 +1,11 @@
-const MeatCard = function({ meat}) {
+const MeatCard = function({ meat, setIndividualMeat}) {
+
+
+    const getMeatDetails = () => {
+        fetch("http://localhost:8080/items/item/" + meat.id)
+        .then(res => res.json())
+        .then(returnedData => setIndividualMeat(returnedData))
+    }
 
     return(
         <>
@@ -7,6 +14,7 @@ const MeatCard = function({ meat}) {
             <h5>{meat.description}</h5>
             <h5>£{meat.price}</h5>
             <h5>{meat.cut}</h5>
+            <button onClick={getMeatDetails}>Details</button>
         </>
     )
 }

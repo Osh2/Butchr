@@ -1,13 +1,17 @@
-const ProcessedCard = function ({ processed }) {
+const ProcessedCard = function ({ processed, setIndividualProcessed }) {
 
     const getAllergens = processed.allergens.map((allergen) => {
         return (
-        
             <li>{allergen}</li>
-        )
-        
+        )  
     })
 
+    
+    const getProcessedDetails = () => {
+        fetch("http://localhost:8080/items/item/" + processed.id)
+        .then(res => res.json())
+        .then(returnedData => setIndividualProcessed(returnedData))
+    }
 
 
     return (
@@ -22,7 +26,7 @@ const ProcessedCard = function ({ processed }) {
         <ul>
         {getAllergens}  
         </ul>
-       
+        <button onClick={getProcessedDetails}>Details</button>
         </>
     )
 
