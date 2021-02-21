@@ -1,15 +1,15 @@
 const ProcessedDetails = ({individualProcessed}) => {
 
-    console.log(individualProcessed.allergens);
+    console.log(individualProcessed);
 
-    let getAllergens; 
-    if(individualProcessed){
-        getAllergens = individualProcessed.allergens.map((allergen) => {
-            return (
-            <li key={allergen}>{allergen}</li> 
-            )}
-        )
-    }
+    // let getAllergens; 
+    // if(individualProcessed){
+    //     getAllergens = individualProcessed.allergens.map((allergen) => {
+    //         return (
+    //         <li key={allergen}>{allergen}</li> 
+    //         )}
+    //     )
+    // }
 
 
     return (
@@ -21,7 +21,7 @@ const ProcessedDetails = ({individualProcessed}) => {
             <p>{individualProcessed.ingredients}</p>
             <h4>Allergens:</h4>
             <ul>
-                {getAllergens}
+                {/* {getAllergens} */}
             </ul>
 
         </div>

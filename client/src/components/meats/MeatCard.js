@@ -8,8 +8,11 @@ const MeatCard = function({ meat, setIndividualMeat}) {
         .then(returnedData => setIndividualMeat(returnedData))
     }
 
+    const showImage = meat.image
+
     return(
         <div className="meatCard">
+            <img src={showImage}/>
             <h4>{meat.name}</h4>
             <h5>{meat.type}</h5>
             <h5>£{meat.price}</h5>

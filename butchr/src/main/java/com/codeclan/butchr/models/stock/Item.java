@@ -29,21 +29,33 @@ public abstract class Item {
     @Column
     private double price;
 
+    @Column
+    private String image;
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     @JsonIgnoreProperties("basket")
     private User user;
 
 
-    public Item(String name, String type, String description, double price) {
+    public Item(String name, String type, String description, double price, String image) {
         this.name = name;
         this.type = type;
         this.description = description;
         this.price = price;
         this.user = null;
+        this.image = image;
     }
 
     public Item() {
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getItemType() {

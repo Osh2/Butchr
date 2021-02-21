@@ -15,9 +15,11 @@ const ProcessedCard = function ({ processed, setIndividualProcessed }) {
         .then(returnedData => setIndividualProcessed(returnedData))
     }
 
+    const showImage = processed.image;
 
     return (
         <div className="processedCard">
+            <img src = {showImage} />
             <h4>{processed.name}</h4>
             <h5>{processed.type}</h5>
             <h5>£{processed.price}</h5>

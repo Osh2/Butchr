@@ -8,9 +8,12 @@ const NonFoodCard = ({nonFood, setIndivdualNonFoodItem}) => {
         .then(res => res.json())
         .then(returnedData => setIndivdualNonFoodItem(returnedData))
     }
+    
+    const showImage = nonFood.image
 
     return (
         <div className="nonFoodCard">
+            <img src={showImage} />
             <h5>{nonFood.name}</h5>
             <h5>{nonFood.type}</h5>
             <p>£{nonFood.price}</p>

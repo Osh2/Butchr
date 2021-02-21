@@ -15,8 +15,8 @@ public class Processed extends Item {
     @ElementCollection
     private List<String> allergens;
 
-    public Processed(String name, String type, String description, double price, String ingredients) {
-        super(name, type, description, price);
+    public Processed(String name, String type, String description, double price, String image, String ingredients) {
+        super(name, type, description, price, image);
         this.ingredients = ingredients;
         this.allergens = new ArrayList<>();
     }

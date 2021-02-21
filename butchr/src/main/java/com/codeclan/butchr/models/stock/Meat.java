@@ -9,8 +9,8 @@ public class Meat extends Item{
     @Column
     private String cut;
 
-    public Meat(String name, String type, String description, double price, String cut) {
-        super(name, type, description, price);
+    public Meat(String name, String type, String description, double price, String image, String cut) {
+        super(name, type, description, price, image);
         this.cut = cut;
     }
 

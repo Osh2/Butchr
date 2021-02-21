@@ -9,8 +9,8 @@ public class NonFood extends Item {
     @Column
     private String manufacturer;
 
-    public NonFood(String name, String type, String description, double price, String manufacturer) {
-        super(name, type, description, price);
+    public NonFood(String name, String type, String description, double price, String image, String manufacturer) {
+        super(name, type, description, price, image);
         this.manufacturer = manufacturer;
     }
 
