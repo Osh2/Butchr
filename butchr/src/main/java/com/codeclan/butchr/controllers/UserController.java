@@ -22,6 +22,10 @@ public class UserController {
 
     @GetMapping(value = "/users/{email}")
     public ResponseEntity<User> getUser(@PathVariable String email){
+        if(userRepository.findByEmailIgnoreCase(email) == null ){
+            User dummy = new User("NULL", email, "", "", 2);
+            return new ResponseEntity<>(dummy, HttpStatus.OK);
+        }
         return (new ResponseEntity<>(userRepository.findByEmailIgnoreCase(email), HttpStatus.OK));
     }
 

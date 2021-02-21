@@ -8,13 +8,13 @@ function App() {
   const [user, setUser] = useState([]);
 
   const renderButchrContainer = () => {
-    if(user.length != 0){
+    if(user.length != 0 && user.name !="NULL"){
     return <ButchrContainer /> }
   }
 
   const renderLoginPage = () => {
-    if(user.length === 0){
-      return <LoginPage setUser={setUser}/>
+    if(user.length === 0 || user.name === "NULL"){
+      return <LoginPage user={user} setUser={setUser}/>
     }
   }
 
