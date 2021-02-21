@@ -1,9 +1,10 @@
-import NavBar from "./NavBar";
+
 
 const HomePage = function() {
     return (
         <>
-            <NavBar/>
+        <h1>Homepage</h1>
+            
         </>
     )
 }

@@ -13,9 +13,9 @@ const NonFoodList = ({nonFoodData, setIndivdualNonFoodItem}) => {
     })
 
     return (
-        <>
-       {nonFoodJSX}
-       </>
+        <div id="nonFoodList">
+            {nonFoodJSX}
+        </div>
     )
 }
 

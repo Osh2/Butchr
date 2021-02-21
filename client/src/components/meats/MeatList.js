@@ -10,9 +10,9 @@ const MeatList = ({meatData, setIndividualMeat}) => {
     })
     
     return(
-        <>
+        <div id="meatList">
             {meatJSX}
-        </>
+        </div>
     )
 }
 
