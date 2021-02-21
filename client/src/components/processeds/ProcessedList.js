@@ -7,15 +7,14 @@ const ProcessedList = ({processedData, setIndividualProcessed}) => {
             <ProcessedCard 
             processed = {item}
             setIndividualProcessed={setIndividualProcessed}
-            key = {item.id}
-            />
+            key = {item.id}/>
         )
     })
 
     return (
-        <>
+        <div id="processedList">
             {processedJSX}
-        </>
+        </div>
     )
 }
 

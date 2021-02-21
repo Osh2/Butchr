@@ -1,8 +1,13 @@
+import {Link} from "react-router-dom"
+
 const NavBar = function (){
     return(
-        <>
-            <h1>I'm a nav bar hehehe</h1>
-        </>
+        <div id="navBar">
+            <Link to="/">Home</Link>
+            <Link to="/meat"> Fresh Cuts </Link>
+            <Link to="/processed"> Processed Products </Link>
+            <Link to="/nonfood"> Utensils and Equipment  </Link>
+        </div>
     )
 }
 
