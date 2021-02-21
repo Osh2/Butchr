@@ -1,10 +1,12 @@
+import {Link} from "react-router-dom";
+
 const ProcessedCard = function ({ processed, setIndividualProcessed }) {
 
-    const getAllergens = processed.allergens.map((allergen) => {
-        return (
-            <li>{allergen}</li>
-        )  
-    })
+    // const getAllergens = processed.allergens.map((allergen) => {
+    //     return (
+    //         <li key={allergen}>{allergen}</li>
+    //     )  
+    // })
 
     
     const getProcessedDetails = () => {
@@ -15,19 +17,12 @@ const ProcessedCard = function ({ processed, setIndividualProcessed }) {
 
 
     return (
-        <>
-        <h4>{processed.name}</h4>
-        <h5>{processed.type}</h5>
-        <h5>£{processed.price}</h5>
-        <h5>{processed.description}</h5>
-        <h5>{processed.ingredients}</h5>
-
-        <h5>Allergens:</h5>
-        <ul>
-        {getAllergens}  
-        </ul>
-        <button onClick={getProcessedDetails}>Details</button>
-        </>
+        <div className="processedCard">
+            <h4>{processed.name}</h4>
+            <h5>{processed.type}</h5>
+            <h5>£{processed.price}</h5>
+            <Link to="/processeddetails"><button onClick={getProcessedDetails}>Details</button></Link>
+        </div>
     )
 
 }

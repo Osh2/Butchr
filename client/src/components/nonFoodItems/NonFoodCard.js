@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 const NonFoodCard = ({nonFood, setIndivdualNonFoodItem}) => {
 
 
@@ -8,14 +10,12 @@ const NonFoodCard = ({nonFood, setIndivdualNonFoodItem}) => {
     }
 
     return (
-        <>
-        <h5>{nonFood.name}</h5>
-        <h5>{nonFood.type}</h5>
-        <h5>{nonFood.description}</h5>
-        <h5>{nonFood.price}</h5>
-        <h5>{nonFood.manufacturer}</h5>
-        <button onClick={getNonFoodDetails}>Details</button>
-        </>
+        <div className="nonFoodCard">
+            <h5>{nonFood.name}</h5>
+            <h5>{nonFood.type}</h5>
+            <p>£{nonFood.price}</p>
+            <Link to="/nonfooddetails"><button onClick={getNonFoodDetails}>Details</button></Link>
+        </div>
     )
 }
 

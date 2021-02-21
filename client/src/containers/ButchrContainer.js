@@ -7,6 +7,7 @@ import NonFoodPage from "../components/nonFoodItems/NonFoodPage";
 import MeatDetails from "../components/meats/MeatDetails";
 import NonFoodDetails from "../components/nonFoodItems/NonFoodDetails";
 import ProcessedDetails from "../components/processeds/ProcessedDetails";
+import NavBar from "../components/NavBar";
 
 const ButchrContainer = function() {
 
@@ -18,13 +19,12 @@ const ButchrContainer = function() {
     const [individualProcessed, setIndividualProcessed] = useState({});
     const [individualNonFoodItem, setIndivdualNonFoodItem] = useState({});
 
-    console.log(individualMeat);
     const getMeatData = () => {
         fetch("http://localhost:8080/items/meat")
         .then(res => res.json())
         .then(returnedData => setMeatData(returnedData));
     }
-
+    
     const getProcessedData = () => {
         fetch("http://localhost:8080/items/processed")
         .then(res => res.json())
@@ -37,24 +37,26 @@ const ButchrContainer = function() {
         .then(returnedData => setNonFoodData(returnedData));
     }
 
+
     useEffect(()=>{
         getMeatData();
         getProcessedData();
         getNonFoodItemData();
     }, [])
-
+    console.log(individualProcessed);
     return(
 
         <Router  >
-            <h1> Butchr Container </h1>
-            <HomePage />
+            <h1> Welcome to Butchr </h1>
+            <NavBar/>
+            <Route exact path = "/" component={HomePage} />
             <Switch >
             <Route path ="/meat" render={(props) => <MeatPage {...props} meatData={meatData} setIndividualMeat={setIndividualMeat} />} /> 
             <Route path ="/processed" render={(props) => <ProcessedPage {...props} processedData = {processedData} setIndividualProcessed={setIndividualProcessed} />} />
             <Route path ="/nonFood" render={(props) => <NonFoodPage nonFoodData={nonFoodData} setIndivdualNonFoodItem={setIndivdualNonFoodItem} /> } />
             <Route path="/meatdetails" render={(props) => <MeatDetails individualMeat={individualMeat} />} />
             <Route path="/nonfooddetails" render={(props) => <NonFoodDetails individualNonFoodItem={individualNonFoodItem} />} />
-            <Route path ="processeddetails" render={(props) => <ProcessedDetails individualProcessed={individualProcessed} /> } />
+            <Route path ="/processeddetails" render={(props) => <ProcessedDetails individualProcessed={individualProcessed} /> } />
             </Switch>
          </Router>
     )
