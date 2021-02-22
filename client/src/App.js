@@ -9,7 +9,7 @@ function App() {
 
   const renderButchrContainer = () => {
     if(user.length != 0 && user.name !="NULL"){
-    return <ButchrContainer /> }
+    return <ButchrContainer user = {user}/> }
   }
 
   const renderLoginPage = () => {

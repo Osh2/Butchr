@@ -9,7 +9,7 @@ import NonFoodDetails from "../components/nonFoodItems/NonFoodDetails";
 import ProcessedDetails from "../components/processeds/ProcessedDetails";
 import NavBar from "../components/auxillary /NavBar";
 
-const ButchrContainer = function() {
+const ButchrContainer = function({user}) {
 
     const [meatData, setMeatData] = useState([]);
     const [processedData, setProcessedData] = useState([]);
@@ -51,7 +51,7 @@ const ButchrContainer = function() {
             <NavBar/>
             <Route exact path = "/" component={HomePage} />
             <Switch >
-            <Route path ="/meat" render={(props) => <MeatPage {...props} meatData={meatData} setIndividualMeat={setIndividualMeat} />} /> 
+            <Route path ="/meat" render={(props) => <MeatPage {...props} meatData={meatData} user={user} setIndividualMeat={setIndividualMeat} />} /> 
             <Route path ="/processed" render={(props) => <ProcessedPage {...props} processedData = {processedData} setIndividualProcessed={setIndividualProcessed} />} />
             <Route path ="/nonFood" render={(props) => <NonFoodPage nonFoodData={nonFoodData} setIndivdualNonFoodItem={setIndivdualNonFoodItem} /> } />
             <Route path="/meatdetails" render={(props) => <MeatDetails individualMeat={individualMeat} />} />
