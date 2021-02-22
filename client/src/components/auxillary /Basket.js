@@ -37,9 +37,7 @@ const Basket = ({user}) => {
             <h1>This is your basket {user.name} </h1>
             {basketJSX}
             <h1>Total basket = £{total}</h1>
-
         </div>
-
 
 
         //confirm basket, maybe with qr code
