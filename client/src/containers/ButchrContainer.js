@@ -8,6 +8,7 @@ import MeatDetails from "../components/meats/MeatDetails";
 import NonFoodDetails from "../components/nonFoodItems/NonFoodDetails";
 import ProcessedDetails from "../components/processeds/ProcessedDetails";
 import NavBar from "../components/auxillary /NavBar";
+import Basket from "../components/auxillary /Basket";
 
 const ButchrContainer = function({user}) {
 
@@ -57,6 +58,7 @@ const ButchrContainer = function({user}) {
             <Route path="/meatdetails" render={(props) => <MeatDetails individualMeat={individualMeat} />} />
             <Route path="/nonfooddetails" render={(props) => <NonFoodDetails individualNonFoodItem={individualNonFoodItem} />} />
             <Route path ="/processeddetails" render={(props) => <ProcessedDetails individualProcessed={individualProcessed} /> } />
+            <Route path="/basket" component={Basket} user={user}/> 
             </Switch>
          </Router>
     )

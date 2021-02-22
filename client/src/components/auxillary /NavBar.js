@@ -7,6 +7,8 @@ const NavBar = function (){
             <Link to="/meat"> Fresh Cuts </Link>
             <Link to="/processed"> Processed Products </Link>
             <Link to="/nonfood"> Utensils and Equipment  </Link>
+            <Link to="/basket"> Basket  </Link>
+
         </div>
     )
 }
