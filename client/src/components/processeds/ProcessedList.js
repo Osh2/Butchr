@@ -1,4 +1,6 @@
 import ProcessedCard from "./ProcessedCard";
+import App from "../../App";
+
 
 const ProcessedList = ({processedData, setIndividualProcessed, user }) => {
 
@@ -13,9 +15,9 @@ const ProcessedList = ({processedData, setIndividualProcessed, user }) => {
     })
 
     return (
-        <div id="processedList">
-            {processedJSX}
-        </div>
+        <div className="itemList">
+                {processedJSX}
+            </div>
     )
 }
 

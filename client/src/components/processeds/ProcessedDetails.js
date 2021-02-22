@@ -1,3 +1,5 @@
+import App from "../../App";
+
 const ProcessedDetails = ({individualProcessed}) => {
 
     console.log(individualProcessed);
@@ -11,9 +13,12 @@ const ProcessedDetails = ({individualProcessed}) => {
     //     )
     // }
 
+    const showImage = individualProcessed.image
 
     return (
-        <div id="processedDetails">
+        <div className="itemDetails">
+        {/* <div id="processedDetails"> */}
+            <img height="350rem" src={showImage}/>
             <h1>{individualProcessed.name}</h1>
             <p>{individualProcessed.type}</p>
             <p>£{individualProcessed.price}</p>

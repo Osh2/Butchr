@@ -1,4 +1,5 @@
 import NonFoodCard from "../nonFoodItems/NonFoodCard";
+import App from "../../App";
 
 const NonFoodList = ({nonFoodData, setIndivdualNonFoodItem, user}) => {
 
@@ -14,9 +15,10 @@ const NonFoodList = ({nonFoodData, setIndivdualNonFoodItem, user}) => {
     })
 
     return (
-        <div id="nonFoodList">
+        <div className="itemList">
             {nonFoodJSX}
         </div>
+
     )
 }
 

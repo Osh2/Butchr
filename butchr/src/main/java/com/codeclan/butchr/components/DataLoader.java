@@ -36,8 +36,8 @@ public class DataLoader implements ApplicationRunner {
 
 
 
-        Meat meat1 = new Meat("Free Range Chicken", "Chicken", "Free Range herb fed Chicken. These chickens live in small flocks. They forage on grasses and herbs across Sladesdown Farms Devon pastures. We believe a natural habitat and diet makes these chickens taste even better.", 20, "https://www" +
-                "https://fd-v5-api.imgix.net/assets/product_images/e3d6bfe6b1dd0af50afb83e36b67f98e0f502e427db2e6cc269d88d22add3656/Wood_Green_Farm_Organic_Whole_ChickenFD20_Nov17.jpg?fm=pjpg&q=90&auto=format&ar=5%3A4&fit=crop&w=745&exp=0&crop=undefined", "Whole");
+        Meat meat1 = new Meat("Free Range Chicken", "Chicken", "Free Range herb fed Chicken. These chickens live in small flocks. They forage on grasses and herbs across Sladesdown Farms Devon pastures. We believe a natural habitat and diet makes these chickens taste even better.", 20, 
+                "https://cdn.shopify.com/s/files/1/0276/1575/6355/products/free-range-english-chicken_540x.jpg?v=1597055014", "Whole");
         itemRepository.save(meat1);
 
         Meat meat2 = new Meat("Organic Chicken", "Chicken", "Organic and Free Range, corn fed Chicken. These chickens live in small flocks. They forage on grasses and herbs across Sladesdown Farms Devon pastures. We believe a natural habitat and diet makes these chickens taste even better.",  25, "https://www.farmison.com/thumbs/whole-chicken.7c2704a2-e647-4bdf-9643-dbd3bee8db8c.square.900x900.jpg", "Whole");

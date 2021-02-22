@@ -1,7 +1,15 @@
+import App from "../../App";
+
+
 const NonFoodDetails = ({individualNonFoodItem}) => {
 
+    const showImage = individualNonFoodItem.image
+
+
     return( 
-        <div id="nonFoodDetails">
+        <div className="itemDetails">
+        {/* <div id="nonFoodDetails"> */}
+            <img height="350rem" src={showImage}/>
             <h1>{individualNonFoodItem.name}</h1>
             <p>{individualNonFoodItem.type}</p>
             <p>£{individualNonFoodItem.price}</p>

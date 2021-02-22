@@ -1,5 +1,5 @@
 import MeatPage from "../../css/MeatPage.css"
-
+import App from "../../App";
 import MeatCard from "./MeatCard";
 
 const MeatList = ({meatData, setIndividualMeat, user}) => {
@@ -12,9 +12,10 @@ const MeatList = ({meatData, setIndividualMeat, user}) => {
     })
     
     return(
-        <div id="meatList">
+       <div className="itemList">
             {meatJSX}
         </div>
+   
     )
 }
 
