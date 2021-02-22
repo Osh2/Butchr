@@ -1,8 +1,12 @@
+import userEvent from "@testing-library/user-event";
 import App from "../../App";
 
-const ProcessedDetails = ({individualProcessed}) => {
+const ProcessedDetails = ({user, individualProcessed}) => {
 
-    console.log(individualProcessed);
+    const addToBasket = () => {
+        user.basket.push ( individualProcessed);
+
+    }
 
     // let getAllergens; 
     // if(individualProcessed){
@@ -24,6 +28,7 @@ const ProcessedDetails = ({individualProcessed}) => {
             <p>£{individualProcessed.price}</p>
             <p>{individualProcessed.description}</p>
             <p>{individualProcessed.ingredients}</p>
+            <button onClick={addToBasket}>Add to Basket</button>
             <h4>Allergens:</h4>
             <ul>
                 {/* {getAllergens} */}

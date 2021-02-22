@@ -1,7 +1,12 @@
+import userEvent from "@testing-library/user-event";
 import App from "../../App";
 
 
-const MeatDetails = ({individualMeat}) => {
+const MeatDetails = ({user, individualMeat}) => {
+
+        const addToBasket = () => {
+            user.basket.push (individualMeat)
+        }
 
 
     const showImage = individualMeat.image
@@ -16,6 +21,7 @@ const MeatDetails = ({individualMeat}) => {
             <p>{individualMeat.cut}</p>
             <p>{individualMeat.type}</p>
             <p>£{individualMeat.price}</p>
+            <button onClick={addToBasket}>Add to Basket</button>
         </div>
     )
 }
