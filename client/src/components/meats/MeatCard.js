@@ -15,7 +15,6 @@ const MeatCard = function({ meat, setIndividualMeat, user}) {
 
     const addToBasket = () => {
         user.basket.push(meat);
-        console.log(user);
     }
 
 

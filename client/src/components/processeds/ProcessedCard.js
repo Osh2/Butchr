@@ -20,7 +20,6 @@ const ProcessedCard = function ({ processed, setIndividualProcessed, user }) {
 
     const addToBasket = () => {
         user.basket.push(processed);
-        console.log(user);
     }
 
     return (

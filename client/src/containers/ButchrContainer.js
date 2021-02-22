@@ -58,7 +58,7 @@ const ButchrContainer = function({user}) {
             <Route path="/meatdetails" render={(props) => <MeatDetails individualMeat={individualMeat} />} />
             <Route path="/nonfooddetails" render={(props) => <NonFoodDetails individualNonFoodItem={individualNonFoodItem} />} />
             <Route path ="/processeddetails" render={(props) => <ProcessedDetails individualProcessed={individualProcessed} /> } />
-            <Route path="/basket" component={Basket} user={user}/> 
+            <Route path="/basket" render={(props) => <Basket user={user}/> }/> 
             </Switch>
          </Router>
     )

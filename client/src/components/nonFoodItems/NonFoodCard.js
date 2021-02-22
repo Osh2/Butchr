@@ -13,7 +13,6 @@ const NonFoodCard = ({nonFood, setIndivdualNonFoodItem, user }) => {
 
     const addToBasket = () => {
         user.basket.push(nonFood);
-        console.log(user);
     }
 
     return (
