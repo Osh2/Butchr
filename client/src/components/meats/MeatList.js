@@ -1,3 +1,5 @@
+import MeatPage from "../../css/MeatPage.css"
+
 import MeatCard from "./MeatCard";
 
 const MeatList = ({meatData, setIndividualMeat}) => {

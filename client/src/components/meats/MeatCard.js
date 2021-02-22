@@ -1,3 +1,6 @@
+import MeatPage from "../../css/MeatPage.css"
+
+
 import {Link} from "react-router-dom";
 const MeatCard = function({ meat, setIndividualMeat}) {
 
@@ -12,12 +15,13 @@ const MeatCard = function({ meat, setIndividualMeat}) {
 
     return(
         <div className="meatCard">
-            <img src={showImage}/>
-            <h4>{meat.name}</h4>
-            <h5>{meat.type}</h5>
-            <h5>£{meat.price}</h5>
-            <Link to="/meatdetails"><button onClick={getMeatDetails}>Details</button></Link>
-        </div>
+                <img height="150rem" src={showImage}/>
+                <h4>{meat.name}</h4>
+                <h5>{meat.type}</h5>
+                <h5>£{meat.price}</h5>
+                <Link to="/meatdetails"><button onClick={getMeatDetails}>Details</button></Link>
+            </div>
+        
     )
 }
 
