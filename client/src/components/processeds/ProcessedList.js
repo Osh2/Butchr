@@ -1,12 +1,13 @@
 import ProcessedCard from "./ProcessedCard";
 
-const ProcessedList = ({processedData, setIndividualProcessed}) => {
+const ProcessedList = ({processedData, setIndividualProcessed, user }) => {
 
     const processedJSX = processedData.map((item) => {
         return (
             <ProcessedCard 
             processed = {item}
             setIndividualProcessed={setIndividualProcessed}
+            user={user}
             key = {item.id}/>
         )
     })

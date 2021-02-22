@@ -1,7 +1,7 @@
 import MeatPage from "../../css/MeatPage.css"
-
-
 import {Link} from "react-router-dom";
+
+
 const MeatCard = function({ meat, setIndividualMeat, user}) {
 
 
