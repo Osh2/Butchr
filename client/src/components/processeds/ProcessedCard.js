@@ -25,7 +25,7 @@ const ProcessedCard = function ({ processed, setIndividualProcessed, user }) {
 
     return (
         <div className="processedCard">
-            <img src = {showImage} />
+            <img height="150rem" src = {showImage} />
             <h4>{processed.name}</h4>
             <h5>{processed.type}</h5>
             <h5>£{processed.price}</h5>

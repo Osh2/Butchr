@@ -396,10 +396,13 @@ public class DataLoader implements ApplicationRunner {
 //
 //        //non food
 //
-//        NonFood cookbook = new NonFood("Lidgates Cook book", "Book", "Cook book", 25, "Danny Lidgate");
-//
-//        NonFood string = new NonFood("Professional butchers string", "Cooking accessories", "Professional butchers",
-//                3, "Katie String");
+        NonFood cookbook = new NonFood("Lidgates Cook book", "Book", "Cook book", 25, "https://images-na.ssl-images-amazon.com/images/I/61CLqMHNlBL.jpg","Danny Lidgate");
+        itemRepository.save(cookbook);
+
+        NonFood string = new NonFood("Professional butchers string", "Cooking accessories", "Professional butchers",
+                3, "https://images-na.ssl-images-amazon.com/images/I/81%2BlBNEOtwL._AC_SL1500_.jpg","Katie String");
+        itemRepository.save(string);
+
 //
 //        NonFood thermometer = new NonFood("Meat thermometre", "Cooking accessories", "Neat testy meat heat", 6, "Hot " +
 //                "Stix");

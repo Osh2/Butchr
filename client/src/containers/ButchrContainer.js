@@ -53,7 +53,7 @@ const ButchrContainer = function({user}) {
             <Switch >
             <Route path ="/meat" render={(props) => <MeatPage {...props} meatData={meatData} user={user} setIndividualMeat={setIndividualMeat} />} /> 
             <Route path ="/processed" render={(props) => <ProcessedPage {...props} processedData = {processedData} setIndividualProcessed={setIndividualProcessed} user={user} />} />
-            <Route path ="/nonFood" render={(props) => <NonFoodPage nonFoodData={nonFoodData} setIndivdualNonFoodItem={setIndivdualNonFoodItem} /> } />
+            <Route path ="/nonFood" render={(props) => <NonFoodPage nonFoodData={nonFoodData} setIndivdualNonFoodItem={setIndivdualNonFoodItem} user={user}/> } />
             <Route path="/meatdetails" render={(props) => <MeatDetails individualMeat={individualMeat} />} />
             <Route path="/nonfooddetails" render={(props) => <NonFoodDetails individualNonFoodItem={individualNonFoodItem} />} />
             <Route path ="/processeddetails" render={(props) => <ProcessedDetails individualProcessed={individualProcessed} /> } />
