@@ -231,52 +231,51 @@ public class DataLoader implements ApplicationRunner {
 //        Meat meat29 = new Meat("Rib of Beef", "Beef", "Delicious rob of beef", 68, "Ribeye on the bone");
 //
 
-//        Processed saus = new Processed("Cumberland", "Sausage", "Delicious sausage in sausage form", 6, "https://fd-v5-api.imgix.net/assets/product_images/5a1a150fc4c047ba255a7c5abee4d433408b15df7c943e8a44738a03a267120c/Purton_organics__traditional_sausages_Farmdrop19_Nov1238502.jpg?fm=pjpg&q=90&auto=format&ar=5%3A4&fit=crop&w=545&exp=0&crop=undefined", "Pork, " +
-//                "herbs, seasonings, others");
-//        saus.addAllergen("Gluten");
-//        saus.addAllergen("Egg");
-//        itemRepository.save(saus);
-//
-//        Processed kiev = new Processed("Chicken Kiev", "Kiev", "Amazing Chicken Kiev", 6.75, "https://realfood.tesco" +
-//                ".com/Media/images/Kiev-7-636x418-85947e3f-5de9-4254-973c-b5e616f401a3-0-636x418.jpg","Chicken, garlic butter " +
-//                "and breadcrumb coat");
-//        kiev.addAllergen("Gluten");
-//        kiev.addAllergen("Egg");
-//        itemRepository.save(kiev);
-//
-//        Processed escalope1 = new Processed("Breaded Chicken Escalope", "Escalope", "Traditional Chicken Escalope", 3.55, "https://feelgoodfoodie.net/wp-content/uploads/2019/03/Air-Fryer-Chicken-1-e1552096195763-500x500.jpg", "Chicken, light seasoning and breadcrumb coat");
-//        escalope1.addAllergen("Gluten");
-//        escalope1.addAllergen("Egg");
-//        itemRepository.save(escalope1);
-//
-//        Processed burger = new Processed("2 Chicken Burgers", "Burgers", "Hand made Chicken Burgers", 2.75, "https" +
-//                "://cdn.shopify.com/s/files/1/0994/7706/products/68_464e3ea1-0118-4222-b0ad-367d3f243e6f_1024x1024.jpg?v=1588616970",
-//                "Chicken, parsley, light seasoning and breadcrumb coat");
-//        burger.addAllergen("Gluten");
-//        burger.addAllergen("Egg");
-//        itemRepository.save(burger);
-//
-//        Processed nuggets = new Processed("10 Chicken Nuggets", "Nuggets", "Free Range Chicken Nuggets", 4.60, "https" +
-//                "://www.budgetbytes.com/wp-content/uploads/2019/05/Homemade-Baked-Chicken-Nuggets-on-rack-V1.jpg","Chicken, " +
-//                "light seasoning and breadcrumb coat");
-//        nuggets.addAllergen("Gluten");
-//        nuggets.addAllergen("Egg");
-//        itemRepository.save(nuggets);
+        Processed saus = new Processed("Cumberland", "Sausage", "Delicious sausage in sausage form", 6, "https://fd-v5-api.imgix.net/assets/product_images/5a1a150fc4c047ba255a7c5abee4d433408b15df7c943e8a44738a03a267120c/Purton_organics__traditional_sausages_Farmdrop19_Nov1238502.jpg?fm=pjpg&q=90&auto=format&ar=5%3A4&fit=crop&w=545&exp=0&crop=undefined", "Pork, " +
+                "herbs, seasonings, others");
+        saus.addAllergen("Gluten");
+        saus.addAllergen("Egg");
+        itemRepository.save(saus);
+
+        Processed kiev = new Processed("Chicken Kiev", "Kiev", "Amazing Chicken Kiev", 6.75, "https://realfood.tesco" +
+                ".com/Media/images/Kiev-7-636x418-85947e3f-5de9-4254-973c-b5e616f401a3-0-636x418.jpg","Chicken, garlic butter " +
+                "and breadcrumb coat");
+        kiev.addAllergen("Gluten");
+        kiev.addAllergen("Egg");
+        itemRepository.save(kiev);
+
+        Processed escalope1 = new Processed("Breaded Chicken Escalope", "Escalope", "Traditional Chicken Escalope", 3.55, "https://feelgoodfoodie.net/wp-content/uploads/2019/03/Air-Fryer-Chicken-1-e1552096195763-500x500.jpg", "Chicken, light seasoning and breadcrumb coat");
+        escalope1.addAllergen("Gluten");
+        escalope1.addAllergen("Egg");
+        itemRepository.save(escalope1);
+
+        Processed burger = new Processed("2 Chicken Burgers", "Burgers", "Hand made Chicken Burgers", 2.75, "https" +
+                "://cdn.shopify.com/s/files/1/0994/7706/products/68_464e3ea1-0118-4222-b0ad-367d3f243e6f_1024x1024.jpg?v=1588616970",
+                "Chicken, parsley, light seasoning and breadcrumb coat");
+        burger.addAllergen("Gluten");
+        burger.addAllergen("Egg");
+        itemRepository.save(burger);
+
+        Processed nuggets = new Processed("10 Chicken Nuggets", "Nuggets", "Free Range Chicken Nuggets", 4.60, "https" +
+                "://www.budgetbytes.com/wp-content/uploads/2019/05/Homemade-Baked-Chicken-Nuggets-on-rack-V1.jpg","Chicken, " +
+                "light seasoning and breadcrumb coat");
+        nuggets.addAllergen("Gluten");
+        nuggets.addAllergen("Egg");
+        itemRepository.save(nuggets);
 //
 //        Processed saus1 = new Processed("Chicken and Asparagus", "Sausage", "Chicken and Asparagus Sausages", 5, "Chicken, asparagus, pistachio nuts, tarragon and spices"
 //        );
 //        itemRepository.save(saus1);
-//
-//        Processed saus2 = new Processed("Chicken and Apple", "Sausage", "Delicious Chicken and Apple Sausages", 4,
-//        "https://fd-v5-api.imgix.net/assets/product_images/8e7bee1e9f861e390fe66477a28ab831ec91ac0c5566c193a95ebbf06e44a38a/FCP_-_ChipolatasFarmdrop19_Apr2930362.jpg?fm=pjpg&q=90&auto=format&ar=5%3A4&fit=crop&w=545&exp=0&crop=undefined",
-//        "Chicken, made sweet and mild with apple"
-//        );
-//        itemRepository.save(saus2);
-//
-//        Processed confit = new Processed("Duck Leg Confit", "Confit", "Succulent Duck Leg Confit", 10, "Duck, seasoning."
-//        );
+
+        Processed saus2 = new Processed("Chicken and Apple", "Sausage", "Delicious Chicken and Apple Sausages", 4,
+        "https://fd-v5-api.imgix.net/assets/product_images/8e7bee1e9f861e390fe66477a28ab831ec91ac0c5566c193a95ebbf06e44a38a/FCP_-_ChipolatasFarmdrop19_Apr2930362.jpg?fm=pjpg&q=90&auto=format&ar=5%3A4&fit=crop&w=545&exp=0&crop=undefined",
+        "Chicken, made sweet and mild with apple"
+        );
+        itemRepository.save(saus2);
+
+//        Processed confit = new Processed("Duck Leg Confit", "Confit", "Succulent Duck Leg Confit", 10, "Duck, seasoning.");
 //        itemRepository.save(confit);
-//
+
 //        Processed escalope2 = new Processed("Breaded Turkey Escalope", "Escalope", "Breaded Turkey Escalope", 12, "Turkey, lemon and parsley breadcrumb coat");
 //        escalope2.addAllergen("Gluten");
 //        escalope2.addAllergen("Egg");
