@@ -19,10 +19,12 @@ function App() {
   }
 
   console.log(user);
-
   
   return (
     <div >
+   <div className="header">
+            <h2> B U T C H R </h2>
+    </div>
       {renderLoginPage()}
       {renderButchrContainer()}
     </div>

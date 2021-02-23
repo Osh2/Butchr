@@ -46,9 +46,7 @@ const ButchrContainer = function({user}) {
     }, [])
 
     return(
-
-        <Router  >
-            <h1> Welcome to Butchr </h1>
+        <Router>
             <NavBar/>
             <Route exact path = "/" component={HomePage} />
             <Switch >

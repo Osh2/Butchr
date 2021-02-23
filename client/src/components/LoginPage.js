@@ -80,7 +80,7 @@ const LoginPage = ({user, setUser}) => {
     //we want to render the rest of the form inputs to allow the user to input their information to create their account IF the fetch on their email returns nothing. 
 
     return (
-        <div>
+        <div className="login">
             <h1> Welcome to Butchr ya bish </h1>
             <form id="userLogin" onSubmit={handleFetch}>
                 <input type="text" placeholder="Please enter your email" onClick={handleChange} onChange={handleChange}/>
