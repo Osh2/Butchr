@@ -40,10 +40,8 @@
 
 .item-image:hover{
     outline: .05rem solid #778f91;
-
     transition: transform .5s;
     transform: scale(1.05);
-    
 }
 
 

@@ -10,8 +10,17 @@
 
 .basket{
     margin: 2rem;
-
 }
+
+#cart-icon{
+    opacity: 60%;
+}
+#cart-icon:hover{
+    opacity: 100%;
+    transform: scale(1.05);
+}
+
+
 
 #remove-button {
     border: none;
