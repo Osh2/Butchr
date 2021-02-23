@@ -32,11 +32,18 @@ const Basket = ({user}) => {
         )
     })
 
+    //added logic so total only renders when there are items in the basket
+    const totalRender = () => {
+        if(user.basket.length > 0 ){
+        return <h1>Total basket = £{total}</h1>
+        }
+    }
+
     return (
         <div>
             <h1>This is your basket {user.name} </h1>
             {basketJSX}
-            <h1>Total basket = £{total}</h1>
+            {totalRender()}
         </div>
 
 

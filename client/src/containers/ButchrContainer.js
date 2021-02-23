@@ -50,7 +50,7 @@ const ButchrContainer = function({user}) {
         <Router  >
             <h1> Welcome to Butchr </h1>
             <NavBar/>
-            <Route exact path = "/" component={HomePage} />
+            <Route exact path = "/" render={(props) => <HomePage user={user} />} />
             <Switch >
             <Route path ="/meat" render={(props) => <MeatPage {...props} meatData={meatData} user={user} setIndividualMeat={setIndividualMeat} />} /> 
             <Route path ="/processed" render={(props) => <ProcessedPage {...props} processedData = {processedData} setIndividualProcessed={setIndividualProcessed} user={user} />} />
