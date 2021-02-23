@@ -1,10 +1,34 @@
 .basketItems{
+    margin-left: 2rem;
     display: grid;
-    grid-template-columns: 24% 24% 24% 24%;
+    grid-template-columns: 19% 10% 8% 5% 19%40%;
     grid-template-rows: auto;
     justify-content: space-between;
     padding: 1.5rem;
+    outline: solid 0px 0px 2px 0px grey;
+}
 
-    outline: solid 1px black;
-    
+.basket{
+    margin: 2rem;
+
+}
+
+#remove-button {
+    border: none;
+    outline: none;
+    padding: 5px 14px;
+    background-color: #94a9aa;
+    color: #f5ebeb;
+    border-radius: 5%;
+    margin: 1px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    max-width: 8rem;
+    margin: 1rem 0;
+    align-self: flex-end;
+}
+
+#remove-button:hover {
+    background-color: #f5ebeb;
+    color: #94a9aa;
 }

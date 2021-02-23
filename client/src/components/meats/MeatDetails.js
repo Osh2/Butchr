@@ -8,7 +8,6 @@ const MeatDetails = ({user, individualMeat}) => {
             user.basket.push (individualMeat)
         }
 
-
     const showImage = individualMeat.image
 
     console.log(individualMeat);

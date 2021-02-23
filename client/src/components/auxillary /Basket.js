@@ -23,16 +23,16 @@ const Basket = ({user}) => {
 
             <div className="basketItems">
                 <img className="item-image" height="150rem" src={item.image}/>
-                <h1 className="name-basket" >{item.name}</h1>
+                <h3 className="name-basket" >{item.name}</h3>
                 <h3 className="type-basket">{item.type}</h3>
                 <h3 className="price-basket">£{item.price}</h3>
-                <button onClick={removeFromBasket}>Remove from Basket</button>
+                <button onClick={removeFromBasket} id="remove-button">Remove from Basket</button>
             </div>
         )
     })
 
     return (
-        <div>
+        <div className="basket">
 
             <h1>Shopping basket</h1>
             {basketJSX}

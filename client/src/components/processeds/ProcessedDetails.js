@@ -28,7 +28,7 @@ const ProcessedDetails = ({user, individualProcessed}) => {
             <p>£{individualProcessed.price}</p>
             <p>{individualProcessed.description}</p>
             <p>{individualProcessed.ingredients}</p>
-            <button onClick={addToBasket}>Add to Basket</button>
+            <button onClick={addToBasket} className="item-buttons">Add to Basket</button>
             <h4>Allergens:</h4>
             <ul>
                 {/* {getAllergens} */}
