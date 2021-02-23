@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import '../../css/Basket.css'
 
 const Basket = ({user}) => {
 
@@ -7,7 +8,7 @@ const Basket = ({user}) => {
     const [basket, setBasket] = useState([]);
 
     const basketJSX = user.basket.map((item) => {
-
+   
         const itemIndex = (user.basket.indexOf(item)); 
 
         const removeFromBasket = () => {
@@ -17,26 +18,26 @@ const Basket = ({user}) => {
             console.log(basket);
         } 
         total += item.price
-       
+
         return (
 
             <div className="basketItems">
-                <img height="150rem" src={item.image}/>
-                <h1>{item.name}</h1>
-                <h3>{item.type}</h3>
-                <h3>{item.description}</h3>
-                <h3>{item.price}</h3>
-                <h3>{item.index}</h3>
-                <button onClick={removeFromBasket}  >Remove</button>
+                <img className="item-image" height="150rem" src={item.image}/>
+                <h1 className="name-basket" >{item.name}</h1>
+                <h3 className="type-basket">{item.type}</h3>
+                <h3 className="price-basket">£{item.price}</h3>
+                <button onClick={removeFromBasket}>Remove from Basket</button>
             </div>
         )
     })
 
     return (
         <div>
-            <h1>This is your basket {user.name} </h1>
+
+            <h1>Shopping basket</h1>
             {basketJSX}
-            <h1>Total basket = £{total}</h1>
+            <hr></hr>
+            <h1>Subtotal ({basket.length} items) £{total}</h1>
         </div>
 
 

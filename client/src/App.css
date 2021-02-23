@@ -2,17 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
-.itemList {
-    display: grid;
-    grid-template-columns: 24% 24% 24% 24%;
-    grid-template-rows: auto;
-    justify-content: space-between;
-    padding: 1.5rem;
-}
-
-.itemDetails{
-    padding: 2rem;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@600&display=swap');
 
 .header {
     padding: 1rem;

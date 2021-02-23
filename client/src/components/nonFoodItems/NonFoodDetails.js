@@ -13,7 +13,7 @@ const NonFoodDetails = ({user, individualNonFoodItem}) => {
         <div className="itemDetails">
         {/* <div id="nonFoodDetails"> */}
             <img height="350rem" src={showImage}/>
-            <h1>{individualNonFoodItem.name}</h1>
+            <h4>{individualNonFoodItem.name}</h4>
             <p>{individualNonFoodItem.type}</p>
             <p>£{individualNonFoodItem.price}</p>
             <p>{individualNonFoodItem.description}</p>

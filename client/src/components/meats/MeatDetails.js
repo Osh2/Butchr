@@ -14,14 +14,13 @@ const MeatDetails = ({user, individualMeat}) => {
     console.log(individualMeat);
     return (
         <div className="itemDetails">
-        {/* // <div id="meatDetails"> */}
             <img height="350rem" src={showImage}/>
-            <h1>{individualMeat.name}</h1>
+            <h4>{individualMeat.name}</h4>
             <p>{individualMeat.description}</p>
             <p>{individualMeat.cut}</p>
             <p>{individualMeat.type}</p>
             <p>£{individualMeat.price}</p>
-            <button onClick={addToBasket}>Add to Basket</button>
+            <button onClick={addToBasket} className="item-buttons">Add to Basket</button>
         </div>
     )
 }

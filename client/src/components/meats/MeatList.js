@@ -1,4 +1,4 @@
-import MeatPage from "../../css/MeatPage.css"
+import "../../css/MeatPage.css"
 import App from "../../App";
 import MeatCard from "./MeatCard";
 

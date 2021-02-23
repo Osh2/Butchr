@@ -23,7 +23,7 @@ const ProcessedDetails = ({user, individualProcessed}) => {
         <div className="itemDetails">
         {/* <div id="processedDetails"> */}
             <img height="350rem" src={showImage}/>
-            <h1>{individualProcessed.name}</h1>
+            <h4>{individualProcessed.name}</h4>
             <p>{individualProcessed.type}</p>
             <p>£{individualProcessed.price}</p>
             <p>{individualProcessed.description}</p>

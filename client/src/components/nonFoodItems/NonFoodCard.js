@@ -16,13 +16,17 @@ const NonFoodCard = ({nonFood, setIndivdualNonFoodItem, user }) => {
     }
 
     return (
-        <div className="nonFoodCard">
-            <img height="150rem" src={showImage} />
-            <h5>{nonFood.name}</h5>
-            <h5>{nonFood.type}</h5>
+        <div className="card">
+            <Link to="/nonfooddetails">
+                <img className="item-image" src={showImage} />
+            </Link>
+
+            <h4 className="item-name" >{nonFood.name}</h4>
             <p>£{nonFood.price}</p>
-            <Link to="/nonfooddetails"><button onClick={getNonFoodDetails}>Details</button></Link>
-            <button onClick={addToBasket}>Add to Basket</button>
+
+            <Link to="/nonfooddetails"><button onClick={getNonFoodDetails}className="item-buttons">Details</button></Link>
+
+            <button onClick={addToBasket}className="item-buttons">Add to Basket</button>
         </div>
     )
 }

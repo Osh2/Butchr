@@ -1,0 +1,53 @@
+.itemList {
+    margin-left: 5rem;
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    grid-template-rows: auto;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.itemDetails{
+    padding: 2rem;
+}
+
+.item-buttons{
+    border: none;
+    outline: none;
+    padding: 5px 14px;
+    background-color: #94a9aa;
+    color: #f5ebeb;
+    border-radius: 5%;
+    margin: 1px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+}
+
+.item-buttons:hover {
+    background-color: #f5ebeb;
+    color: #94a9aa;
+}
+
+.item-image{
+    object-fit: cover;
+    width: 10rem;
+    height: 10rem;
+    padding: 1rem;
+    outline: .15rem solid #94a9aa;
+    text-align: center;
+}
+
+.item-image:hover{
+    outline: .05rem solid #778f91;
+
+    transition: transform .5s;
+    transform: scale(1.05);
+    
+}
+
+
+.card{
+    margin-bottom: 2rem;
+
+    /* outline: 2px solid #94a9aa; */
+}
