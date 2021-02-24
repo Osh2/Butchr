@@ -43,7 +43,7 @@ const Calendar = () => {
     }
 
         const handleDateSelect = (selectInfo) => {
-            let title = prompt('Please enter a new title for your event')
+            let title = prompt('Please enter the name for collection')
             let calendarApi = selectInfo.view.calendar
         
             calendarApi.unselect() 
@@ -60,7 +60,7 @@ const Calendar = () => {
             }
     
         const handleEventClick = (clickInfo) => {
-            let result = window.confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`) 
+            let result = window.confirm(`Are you sure you want to delete the collection for '${clickInfo.event.title}'`) 
             if( result === true) {
             clickInfo.event.remove()
             }
