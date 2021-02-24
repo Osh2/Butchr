@@ -1,20 +1,23 @@
+import userEvent from "@testing-library/user-event";
 import App from "../../App";
 
 
-const NonFoodDetails = ({individualNonFoodItem}) => {
+const NonFoodDetails = ({user, individualNonFoodItem}) => {
 
     const showImage = individualNonFoodItem.image
-
+    const addToBasket = () => {
+        user.basket.push (individualNonFoodItem);
+    }
 
     return( 
         <div className="itemDetails">
-        {/* <div id="nonFoodDetails"> */}
             <img height="350rem" src={showImage}/>
-            <h1>{individualNonFoodItem.name}</h1>
+            <h4>{individualNonFoodItem.name}</h4>
             <p>{individualNonFoodItem.type}</p>
             <p>£{individualNonFoodItem.price}</p>
             <p>{individualNonFoodItem.description}</p>
             <p>{individualNonFoodItem.manufacturer}</p>
+            <button onClick={addToBasket}>Add to Basket</button>
         </div>
     )
 }

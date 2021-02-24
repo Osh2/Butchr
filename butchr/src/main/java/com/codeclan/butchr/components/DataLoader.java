@@ -237,26 +237,27 @@ public class DataLoader implements ApplicationRunner {
         saus.addAllergen("Egg");
         itemRepository.save(saus);
 
-        Processed kiev = new Processed("Chicken Kiev", "Kiev", "Amazing Chicken Kiev", 6.75, "https://realfood.tesco" +
+        Processed kiev = new Processed("Chicken Kiev", "Chicken", "Amazing Chicken Kiev", 6.75, "https://realfood" +
+                ".tesco" +
                 ".com/Media/images/Kiev-7-636x418-85947e3f-5de9-4254-973c-b5e616f401a3-0-636x418.jpg","Chicken, garlic butter " +
                 "and breadcrumb coat");
         kiev.addAllergen("Gluten");
         kiev.addAllergen("Egg");
         itemRepository.save(kiev);
 
-        Processed escalope1 = new Processed("Breaded Chicken Escalope", "Escalope", "Traditional Chicken Escalope", 3.55, "https://feelgoodfoodie.net/wp-content/uploads/2019/03/Air-Fryer-Chicken-1-e1552096195763-500x500.jpg", "Chicken, light seasoning and breadcrumb coat");
+        Processed escalope1 = new Processed("Breaded Chicken Escalope", "Chicken", "Traditional Chicken Escalope", 3.55, "https://feelgoodfoodie.net/wp-content/uploads/2019/03/Air-Fryer-Chicken-1-e1552096195763-500x500.jpg", "Chicken, light seasoning and breadcrumb coat");
         escalope1.addAllergen("Gluten");
         escalope1.addAllergen("Egg");
         itemRepository.save(escalope1);
 
-        Processed burger = new Processed("2 Chicken Burgers", "Burgers", "Hand made Chicken Burgers", 2.75, "https" +
+        Processed burger = new Processed("2 Chicken Burgers", "Chicken", "Hand made Chicken Burgers", 2.75, "https" +
                 "://cdn.shopify.com/s/files/1/0994/7706/products/68_464e3ea1-0118-4222-b0ad-367d3f243e6f_1024x1024.jpg?v=1588616970",
                 "Chicken, parsley, light seasoning and breadcrumb coat");
         burger.addAllergen("Gluten");
         burger.addAllergen("Egg");
         itemRepository.save(burger);
 
-        Processed nuggets = new Processed("10 Chicken Nuggets", "Nuggets", "Free Range Chicken Nuggets", 4.60, "https" +
+        Processed nuggets = new Processed("10 Chicken Nuggets", "Chicken", "Free Range Chicken Nuggets", 4.60, "https" +
                 "://www.budgetbytes.com/wp-content/uploads/2019/05/Homemade-Baked-Chicken-Nuggets-on-rack-V1.jpg","Chicken, " +
                 "light seasoning and breadcrumb coat");
         nuggets.addAllergen("Gluten");

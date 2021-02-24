@@ -17,7 +17,7 @@ const ButchrContainer = function({user}) {
     const [nonFoodData, setNonFoodData] = useState([]);
 
     const [individualMeat, setIndividualMeat] = useState({});
-    const [individualProcessed, setIndividualProcessed] = useState({});
+    const [individualProcessed, setIndividualProcessed] = useState([]);
     const [individualNonFoodItem, setIndivdualNonFoodItem] = useState({});
 
     const getMeatData = () => {
@@ -46,18 +46,17 @@ const ButchrContainer = function({user}) {
     }, [])
 
     return(
-
-        <Router  >
-            <h1> Welcome to Butchr </h1>
-            <NavBar/>
-            <Route exact path = "/" render={(props) => <HomePage user={user} />} />
+        <Router>
+         
+            <NavBar user={user}/>
+            <Route exact path = "/" component={HomePage} />
             <Switch >
             <Route path ="/meat" render={(props) => <MeatPage {...props} meatData={meatData} user={user} setIndividualMeat={setIndividualMeat} />} /> 
             <Route path ="/processed" render={(props) => <ProcessedPage {...props} processedData = {processedData} setIndividualProcessed={setIndividualProcessed} user={user} />} />
             <Route path ="/nonFood" render={(props) => <NonFoodPage nonFoodData={nonFoodData} setIndivdualNonFoodItem={setIndivdualNonFoodItem} user={user}/> } />
-            <Route path="/meatdetails" render={(props) => <MeatDetails individualMeat={individualMeat} />} />
-            <Route path="/nonfooddetails" render={(props) => <NonFoodDetails individualNonFoodItem={individualNonFoodItem} />} />
-            <Route path ="/processeddetails" render={(props) => <ProcessedDetails individualProcessed={individualProcessed} /> } />
+            <Route path="/meatdetails" render={(props) => <MeatDetails user={user} individualMeat={individualMeat} />} />
+            <Route path="/nonfooddetails" render={(props) => <NonFoodDetails user={user}individualNonFoodItem={individualNonFoodItem} />} />
+            <Route path ="/processeddetails" render={(props) => <ProcessedDetails user={user} individualProcessed={individualProcessed} /> } />
             <Route path="/basket" render={(props) => <Basket user={user}/> }/> 
             </Switch>
          </Router>

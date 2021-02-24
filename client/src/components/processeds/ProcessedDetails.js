@@ -1,32 +1,28 @@
 import App from "../../App";
 
-const ProcessedDetails = ({individualProcessed}) => {
+const ProcessedDetails = ({user, individualProcessed}) => {
 
+    const addToBasket = () => {
+        user.basket.push ( individualProcessed);
+        
+    }
     console.log(individualProcessed);
-
-    // let getAllergens; 
-    // if(individualProcessed){
-    //     getAllergens = individualProcessed.allergens.map((allergen) => {
-    //         return (
-    //         <li key={allergen}>{allergen}</li> 
-    //         )}
-    //     )
-    // }
 
     const showImage = individualProcessed.image
 
     return (
         <div className="itemDetails">
-        {/* <div id="processedDetails"> */}
             <img height="350rem" src={showImage}/>
-            <h1>{individualProcessed.name}</h1>
+            <h4>{individualProcessed.name}</h4>
             <p>{individualProcessed.type}</p>
             <p>£{individualProcessed.price}</p>
             <p>{individualProcessed.description}</p>
             <p>{individualProcessed.ingredients}</p>
+            <button onClick={addToBasket} className="item-buttons">Add to Basket</button>
             <h4>Allergens:</h4>
             <ul>
-                {/* {getAllergens} */}
+                {individualProcessed.allergens}
+                
             </ul>
 
         </div>

@@ -15,7 +15,6 @@ const ProcessedCard = function ({ processed, setIndividualProcessed, user }) {
         .then(returnedData => setIndividualProcessed(returnedData))
     }
 
-
     const showImage = processed.image;
 
     const addToBasket = () => {
@@ -23,13 +22,17 @@ const ProcessedCard = function ({ processed, setIndividualProcessed, user }) {
     }
 
     return (
-        <div className="processedCard">
-            <img height="150rem" src = {showImage} />
-            <h4>{processed.name}</h4>
-            <h5>{processed.type}</h5>
-            <h5>£{processed.price}</h5>
-            <Link to="/processeddetails"><button onClick={getProcessedDetails}>Details</button></Link>
-            <button onClick={addToBasket}>Add to Basket</button>
+        <div className="card">
+            <Link to="/processeddetails">
+                <img onClick={getProcessedDetails} src = {showImage} className="item-image"/>
+            </Link>
+
+            <h4 className="item-name" >{processed.name}</h4>
+            <p>£{processed.price}</p>
+
+            <Link to="/processeddetails"><button onClick={getProcessedDetails} className="item-buttons" >Details</button></Link>
+
+            <button onClick={addToBasket} className="item-buttons" >Add to Basket</button>
         </div>
     )
 
