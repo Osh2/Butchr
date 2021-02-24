@@ -18,7 +18,7 @@ const NonFoodCard = ({nonFood, setIndivdualNonFoodItem, user }) => {
     return (
         <div className="card">
             <Link to="/nonfooddetails">
-                <img className="item-image" src={showImage} />
+                <img onClick={getNonFoodDetails} className="item-image" src={showImage} />
             </Link>
 
             <h4 className="item-name" >{nonFood.name}</h4>

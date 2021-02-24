@@ -14,14 +14,12 @@ const Basket = ({user}) => {
         const removeFromBasket = () => {
             user.basket.splice(itemIndex, 1) 
             setBasket(user.basket.length)
-            console.log(user);
-            console.log(basket);
         } 
         total += item.price
 
         return (
 
-            <div className="basketItems">
+            <div className="basketItems" key={item.id}>
                 <img className="item-image" height="150rem" src={item.image}/>
                 <h3 className="name-basket" >{item.name}</h3>
                 <h3 className="type-basket">{item.type}</h3>
@@ -37,7 +35,7 @@ const Basket = ({user}) => {
             <h1>Shopping basket</h1>
             {basketJSX}
             <hr></hr>
-            <h1>Subtotal ({basket.length} items) £{total}</h1>
+            <h1>Subtotal ({user.basket.length} items) £{total.toFixed(2)}</h1>
         </div>
 
 

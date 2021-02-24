@@ -1,12 +1,16 @@
-import {Link} from "react-router-dom"
-import {useState} from 'react';
+import {Link} from "react-router-dom";
 import '../../css/Basket.css'
+import {useState} from 'react';
+
+import isDeepEqual from 'fast-deep-equal/react';
 
 const NavBar = ({user}) => {
 
-    // const displayCartCount = user.basket.map((item) => {
-    //     return (user.basket.length)
-    // })
+    const [basket, setBasketCount] = useState(user.basket);
+
+    if(!isDeepEqual(user.basket, basket)){
+        setBasketCount(user.basket)
+    }
 
     return(
         <div id="navBar">
@@ -16,9 +20,9 @@ const NavBar = ({user}) => {
             <Link to="/nonfood" className="nav-items"> Utensils and Equipment  </Link>
 
             <Link to="/basket" className="nav-items">  
-                {/* <span id='cartCount'> 
-                {displayCartCount()}
-                 </span> */}
+                <span id='cartCount'> 
+                {user.basket.length}
+                 </span>
                 <i class="fa" id="cart-icon">&#xf07a;</i>
             </Link>
 

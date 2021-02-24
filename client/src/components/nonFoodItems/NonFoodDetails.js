@@ -11,7 +11,6 @@ const NonFoodDetails = ({user, individualNonFoodItem}) => {
 
     return( 
         <div className="itemDetails">
-        {/* <div id="nonFoodDetails"> */}
             <img height="350rem" src={showImage}/>
             <h4>{individualNonFoodItem.name}</h4>
             <p>{individualNonFoodItem.type}</p>

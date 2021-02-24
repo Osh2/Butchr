@@ -24,7 +24,7 @@ const ProcessedCard = function ({ processed, setIndividualProcessed, user }) {
     return (
         <div className="card">
             <Link to="/processeddetails">
-                <img src = {showImage} className="item-image"/>
+                <img onClick={getProcessedDetails} src = {showImage} className="item-image"/>
             </Link>
 
             <h4 className="item-name" >{processed.name}</h4>

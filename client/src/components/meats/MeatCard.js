@@ -7,7 +7,6 @@ import {useState} from 'react';
 const MeatCard = function({ meat, setIndividualMeat, user}) {
 
     const [isOpen, setIsOpen] = useState(false)
-
    
     const getMeatDetails = () => {
         fetch("http://localhost:8080/items/item/" + meat.id)
@@ -19,14 +18,17 @@ const MeatCard = function({ meat, setIndividualMeat, user}) {
 
     const addToBasket = () => {
         user.basket.push(meat);
+        setIsOpen(true)
+        setInterval(()=> {
+            setIsOpen(false)
+        },1000)
     }
-
 
     return(
         <div className="card">
             
                 <Link to="/meatdetails">
-                    <img className="item-image"src={showImage}/>
+                    <img onClick={getMeatDetails} className="item-image"src={showImage}/>
                 </Link>
 
                 <h4 className="item-name">{meat.name}</h4>
@@ -40,11 +42,7 @@ const MeatCard = function({ meat, setIndividualMeat, user}) {
                 onClick={addToBasket} 
                 className="item-buttons">Add to Basket</button>
 
-                <button onClick={()=>{setIsOpen(true)}}>modal</button>
-
-
-                <Modal open={isOpen}
-                onClose={()=> setIsOpen(false)}>
+                <Modal open={isOpen}>
                     Added to basket!
                 </Modal>
                 

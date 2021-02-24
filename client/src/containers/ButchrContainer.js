@@ -17,7 +17,7 @@ const ButchrContainer = function({user}) {
     const [nonFoodData, setNonFoodData] = useState([]);
 
     const [individualMeat, setIndividualMeat] = useState({});
-    const [individualProcessed, setIndividualProcessed] = useState({});
+    const [individualProcessed, setIndividualProcessed] = useState([]);
     const [individualNonFoodItem, setIndivdualNonFoodItem] = useState({});
 
     const getMeatData = () => {
@@ -48,7 +48,7 @@ const ButchrContainer = function({user}) {
     return(
         <Router>
          
-            <NavBar/>
+            <NavBar user={user}/>
             <Route exact path = "/" component={HomePage} />
             <Switch >
             <Route path ="/meat" render={(props) => <MeatPage {...props} meatData={meatData} user={user} setIndividualMeat={setIndividualMeat} />} /> 
