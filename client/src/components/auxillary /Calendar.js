@@ -3,11 +3,10 @@ import FullCalendar, { formatDate } from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
-import { INITIAL_EVENTS, createEventId, getEvents } from './Event'
+import { INITIAL_EVENTS, createEventId } from './Event'
 
-const Calendar = ({user}) => {
+const Calendar = () => {
 
-    
     const [eventsInfo, setEventsInfo] = useState([]);
 
     // const getEvents = () => { 
@@ -16,15 +15,15 @@ const Calendar = ({user}) => {
     //     .then((returnedData) => setEventsInfo(returnedData['scotland'].events))
     // }
     
-    // let convertedEventsArray = []
-    // const convertEvents = eventsInfo.map((event)=> {
-    //     let convertedEvent = {
-    //          title : event.title,
-    //          start : event.date
-    //     }
-    //     convertedEventsArray.push(convertedEvent);
+    let convertedEventsArray = []
+    const convertEvents = eventsInfo.map((event)=> {
+        let convertedEvent = {
+             title : event.title,
+             start : event.date
+        }
+        convertedEventsArray.push(convertedEvent);
         
-    // })
+    })
     
     // console.log(INITIAL_EVENTS);
     // console.log(eventsInfo);
