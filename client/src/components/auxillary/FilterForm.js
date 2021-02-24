@@ -11,7 +11,7 @@ const FilterForm = ({filterData}) => {
 
     return (
         <div>
-            <input onChange={handleChange} type="text" value={filterKeyword} placeholder="Filter Keywords" />
+            <input className="filter-form"onChange={handleChange} type="text" value={filterKeyword} placeholder="Filter Keywords" />
         </div>
     )
 }

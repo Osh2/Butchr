@@ -19,18 +19,13 @@ function App() {
     }
   }
 
-  
   return (
-    
-    <div >
-      {/* <Modal>
-          Mudda fuckin modal 
-      </Modal> */}
-   <div>
-        <h2 className="butchrBaby"> B U T C H R </h2>
-    </div>
-      {renderLoginPage()}
-      {renderButchrContainer()}
+    <div>
+      <div>
+          <h2 className="butchrBaby"> B U T C H R </h2>
+      </div>
+        {renderLoginPage()}
+        {renderButchrContainer()}
     </div>
   );
 }

@@ -1,0 +1,70 @@
+#login{
+    margin: 5%  25%;
+}
+
+.email-input{
+    margin-left: 39.8%; 
+}
+
+.form-page {
+    margin: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.userForms{
+    /* margin-left: 40px; */
+    width: 70vw;
+    padding: 0px 0px 40px 40px ;
+    outline: none;  
+}
+
+input[type=text] {
+    display: block;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-top: 10px;
+    border-bottom: 2px solid #878787 ;
+}
+
+.submitUser {
+    border: none;
+    outline: none;
+    padding: 15px 35px;
+    margin-left: 34%;
+    background-color: #94a9aa;
+    color: #f5ebeb;
+}
+.submitUser:hover{
+    background-color: #f5ebeb;
+    color: #94a9aa;
+}
+
+.submitLogin{
+    border: none;
+    outline: none;
+    padding: 15px 40px;
+    background-color: #94a9aa;
+    color: #f5ebeb;
+}
+.submitLogin:hover{
+    background-color: #f5ebeb;
+    color: #94a9aa;
+}
+
+.signupFormItem{
+    color: grey;
+    width: 220px;
+    font-size: 10pt;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: solid 2px grey;   
+    margin-left: 56%;  
+}
+
+label{
+    margin-left: 33%;
+}

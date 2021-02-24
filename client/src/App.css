@@ -100,3 +100,6 @@ b { /* used for event dates/times */
     font-weight: 600;
 }
 
+.filter-form{
+  margin-left: 6.5rem;
+}
