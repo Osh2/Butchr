@@ -26,8 +26,8 @@ function App() {
       {/* <Modal>
           Mudda fuckin modal 
       </Modal> */}
-   <div className="header">
-            <h2> B U T C H R </h2>
+   <div>
+        <h2 className="butchrBaby"> B U T C H R </h2>
     </div>
       {renderLoginPage()}
       {renderButchrContainer()}

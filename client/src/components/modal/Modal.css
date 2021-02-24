@@ -1,4 +1,16 @@
-.modal{
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
+.modal{
+    position:fixed;
+    background-color: #9ed3d6;
+    padding: 9px;
+    border-radius: 3%;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+    opacity: 90%;
+    position: fixed;
+    top: 22%;
+    right: 16%;
 }
 
