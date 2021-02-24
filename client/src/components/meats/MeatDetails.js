@@ -1,11 +1,18 @@
-import userEvent from "@testing-library/user-event";
 import App from "../../App";
+import Modal from '../modal/Modal';
+import {useState} from 'react';
 
 
 const MeatDetails = ({user, individualMeat}) => {
 
+    const [isOpen, setIsOpen] = useState(false)
+
         const addToBasket = () => {
             user.basket.push (individualMeat)
+            setIsOpen(true)
+            setInterval(()=> {
+                setIsOpen(false)
+            },1000)
         }
 
     const showImage = individualMeat.image
@@ -20,6 +27,9 @@ const MeatDetails = ({user, individualMeat}) => {
             <p>{individualMeat.type}</p>
             <p>£{individualMeat.price}</p>
             <button onClick={addToBasket} className="item-buttons">Add to Basket</button>
+            <Modal open={isOpen}>
+                    Added to basket!
+            </Modal>
         </div>
     )
 }

@@ -1,13 +1,16 @@
 import {Link} from "react-router-dom";
+import {useState} from "react";
+import Modal from '../modal/Modal';
 
 const ProcessedCard = function ({ processed, setIndividualProcessed, user }) {
+
+    const [isOpen, setIsOpen] = useState(false)
 
     // const getAllergens = processed.allergens.map((allergen) => {
     //     return (
     //         <li key={allergen}>{allergen}</li>
     //     )  
     // })
-
     
     const getProcessedDetails = () => {
         fetch("http://localhost:8080/items/item/" + processed.id)
@@ -19,6 +22,10 @@ const ProcessedCard = function ({ processed, setIndividualProcessed, user }) {
 
     const addToBasket = () => {
         user.basket.push(processed);
+        setIsOpen(true)
+        setInterval(()=> {
+            setIsOpen(false)
+        },1000)
     }
 
     return (
@@ -33,6 +40,11 @@ const ProcessedCard = function ({ processed, setIndividualProcessed, user }) {
             <Link to="/processeddetails"><button onClick={getProcessedDetails} className="item-buttons" >Details</button></Link>
 
             <button onClick={addToBasket} className="item-buttons" >Add to Basket</button>
+
+            <Modal open={isOpen}>
+                    Added to basket!
+            </Modal>
+
         </div>
     )
 
