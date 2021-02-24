@@ -1,7 +1,11 @@
 import {Link} from "react-router-dom";
+import Modal from '../modal/Modal';
+import {useState} from 'react';
 
 const NonFoodCard = ({nonFood, setIndivdualNonFoodItem, user }) => {
 
+
+    const [isOpen, setIsOpen] = useState(false)
 
     const getNonFoodDetails = () => {
         fetch("http://localhost:8080/items/item/" + nonFood.id)
@@ -13,6 +17,10 @@ const NonFoodCard = ({nonFood, setIndivdualNonFoodItem, user }) => {
 
     const addToBasket = () => {
         user.basket.push(nonFood);
+        setIsOpen(true)
+        setInterval(()=> {
+            setIsOpen(false)
+        },1000)
     }
 
     return (
@@ -27,6 +35,10 @@ const NonFoodCard = ({nonFood, setIndivdualNonFoodItem, user }) => {
             <Link to="/nonfooddetails"><button onClick={getNonFoodDetails}className="item-buttons">Details</button></Link>
 
             <button onClick={addToBasket}className="item-buttons">Add to Basket</button>
+            
+            <Modal open={isOpen}>
+                    Added to basket!
+            </Modal>
         </div>
     )
 }
