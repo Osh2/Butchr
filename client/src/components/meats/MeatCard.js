@@ -1,10 +1,14 @@
 import  "../../css/ItemCard.css"
 import {Link} from "react-router-dom";
+import Modal from '../modal/Modal';
+import {useState} from 'react';
 
 
 const MeatCard = function({ meat, setIndividualMeat, user}) {
 
+    const [isOpen, setIsOpen] = useState(false)
 
+   
     const getMeatDetails = () => {
         fetch("http://localhost:8080/items/item/" + meat.id)
         .then(res => res.json())
@@ -20,6 +24,7 @@ const MeatCard = function({ meat, setIndividualMeat, user}) {
 
     return(
         <div className="card">
+            
                 <Link to="/meatdetails">
                     <img className="item-image"src={showImage}/>
                 </Link>
@@ -27,10 +32,22 @@ const MeatCard = function({ meat, setIndividualMeat, user}) {
                 <h4 className="item-name">{meat.name}</h4>
                 <p>£{meat.price}</p>
 
-                <Link to="/meatdetails"><button onClick={getMeatDetails} className="item-buttons"
-                >Details</button></Link>
+                <Link to="/meatdetails">
+                    <button onClick={getMeatDetails} className="item-buttons">Details</button>
+                </Link>
+                
+                <button 
+                onClick={addToBasket} 
+                className="item-buttons">Add to Basket</button>
 
-                <button onClick={addToBasket} className="item-buttons">Add to Basket</button>
+                <button onClick={()=>{setIsOpen(true)}}>modal</button>
+
+
+                <Modal open={isOpen}
+                onClose={()=> setIsOpen(false)}>
+                    Added to basket!
+                </Modal>
+                
             </div>
         
     )

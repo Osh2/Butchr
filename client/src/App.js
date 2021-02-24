@@ -2,6 +2,7 @@ import './App.css';
 import ButchrContainer from './containers/ButchrContainer';
 import LoginPage from './components/LoginPage'
 import {useState} from 'react'
+import Modal from './components/modal/Modal'
 
 function App() {
 
@@ -21,7 +22,11 @@ function App() {
   console.log(user);
   
   return (
+    
     <div >
+      {/* <Modal>
+          Mudda fuckin modal 
+      </Modal> */}
    <div className="header">
             <h2> B U T C H R </h2>
     </div>
