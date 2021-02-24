@@ -29,24 +29,20 @@ const Basket = ({user}) => {
         )
     })
 
-    //added logic so total only renders when there are items in the basket
+    
     const totalRender = () => {
         if(user.basket.length > 0 ){
-        return <h1>Total basket = £{total}</h1>
+        return <h1>Subtotal ({user.basket.length} items) £{total.toFixed(2)}</h1>
         }
     }
 
     return (
         <div className="basket">
-
             <h1>Shopping basket</h1>
             {basketJSX}
             <hr></hr>
-            <h1>Subtotal ({user.basket.length} items) £{total.toFixed(2)}</h1>
+            {totalRender()}
         </div>
-
-
-        //confirm basket, maybe with qr code
     )
 }
 

@@ -8,12 +8,6 @@ import { INITIAL_EVENTS, createEventId } from './Event'
 const Calendar = () => {
 
     const [eventsInfo, setEventsInfo] = useState([]);
-
-    // const getEvents = () => { 
-    //     fetch("https://www.gov.uk/bank-holidays.json")
-    //     .then(res => res.json())
-    //     .then((returnedData) => setEventsInfo(returnedData['scotland'].events))
-    // }
     
     let convertedEventsArray = []
     const convertEvents = eventsInfo.map((event)=> {
@@ -24,16 +18,7 @@ const Calendar = () => {
         convertedEventsArray.push(convertedEvent);
         
     })
-    
-    // console.log(INITIAL_EVENTS);
-    // console.log(eventsInfo);
-    // console.log(convertedEventsArray);
 
-    // useEffect(() => {
-    //     getEvents()
-    //     setEventsInfo(convertedEventsArray);
-    // },[user])
-        
     const sideBar = () => {
         return(
         <div className='demo-app-sidebar'>
@@ -61,7 +46,7 @@ const Calendar = () => {
             let title = prompt('Please enter a new title for your event')
             let calendarApi = selectInfo.view.calendar
         
-            calendarApi.unselect() // clear date selection
+            calendarApi.unselect() 
         
                 if (title) {
                 calendarApi.addEvent({
@@ -120,11 +105,11 @@ const Calendar = () => {
             selectMirror={true}
             dayMaxEvents={true}
             weekends={true}
-            initialEvents={eventsInfo} // alternatively, use the `events` setting to fetch from a feed
+            initialEvents={eventsInfo} 
             select={handleDateSelect}
-            eventContent={renderEventContent} // custom render function
+            eventContent={renderEventContent} 
             eventClick={handleEventClick}
-            eventsSet={handleEvents} // called after events are initialized/added/changed/removed
+            eventsSet={handleEvents} 
           />
         </div>
       </div>
