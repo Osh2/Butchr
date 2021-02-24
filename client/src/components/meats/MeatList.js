@@ -1,4 +1,3 @@
-import "../../css/MeatPage.css"
 import App from "../../App";
 import MeatCard from "./MeatCard";
 import {useState} from "react"
