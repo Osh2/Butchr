@@ -5,12 +5,6 @@ import Modal from '../modal/Modal';
 const ProcessedCard = function ({ processed, setIndividualProcessed, user }) {
 
     const [isOpen, setIsOpen] = useState(false)
-
-    // const getAllergens = processed.allergens.map((allergen) => {
-    //     return (
-    //         <li key={allergen}>{allergen}</li>
-    //     )  
-    // })
     
     const getProcessedDetails = () => {
         fetch("http://localhost:8080/items/item/" + processed.id)

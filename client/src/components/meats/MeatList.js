@@ -5,7 +5,7 @@ import {useState} from "react"
 
 const MeatList = ({meatData, setIndividualMeat, user}) => {
 
-    // const [filtered, setFiltered] = useState("all")
+
 
     const meatJSX = meatData.map((item) => {
             return(
@@ -18,9 +18,7 @@ const MeatList = ({meatData, setIndividualMeat, user}) => {
     return(
        <div className="itemList">
             {meatJSX}
-        </div>
-        
-   
+        </div>   
     )
 }
 
