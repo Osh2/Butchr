@@ -15,7 +15,6 @@ An app which will improve the shopping experience of customers at Lidgates(other
 ## EXTENSIONS
 - Create a Customer class ( allow a user to "sign in" if they exists or create their "account" if not )
 - Allow a user to reserve an item (inform the user how many are left in stock, which can't be reserved )
-- Style the bitch 
 
 - Search function (by name, by type)
 - Filter/sort by price 
