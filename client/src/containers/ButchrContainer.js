@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom"
-import HomePage from "../components/auxillary /HomePage"
+import HomePage from "../components/auxillary/HomePage"
 import MeatPage from "../components/meats/MeatPage";
 import ProcessedPage from "../components/processeds/ProcessedPage";
 import NonFoodPage from "../components/nonFoodItems/NonFoodPage";
 import MeatDetails from "../components/meats/MeatDetails";
 import NonFoodDetails from "../components/nonFoodItems/NonFoodDetails";
 import ProcessedDetails from "../components/processeds/ProcessedDetails";
-import NavBar from "../components/auxillary /NavBar";
-import Basket from "../components/auxillary /Basket";
+import NavBar from "../components/auxillary/NavBar";
+import Basket from "../components/auxillary/Basket";
 
 const ButchrContainer = function({user}) {
 
@@ -19,6 +19,8 @@ const ButchrContainer = function({user}) {
     const [individualMeat, setIndividualMeat] = useState({});
     const [individualProcessed, setIndividualProcessed] = useState([]);
     const [individualNonFoodItem, setIndivdualNonFoodItem] = useState({});
+
+ 
 
     const getMeatData = () => {
         fetch("http://localhost:8080/items/meat")
