@@ -94,7 +94,7 @@ const LoginPage = ({user, setUser}) => {
 
     return (
         <div className="login">
-            <h1> Welcome to Butchr ya bish </h1>
+            <h1> Welcome to Butchr</h1>
 
             <form id="login" onSubmit={handleFetch}>
                 
